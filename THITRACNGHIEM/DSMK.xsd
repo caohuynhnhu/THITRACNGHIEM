@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSMK" targetNamespace="http://tempuri.org/DSMK.xsd" xmlns:mstns="http://tempuri.org/DSMK.xsd" xmlns="http://tempuri.org/DSMK.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="TRACNGHIEMConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="TRACNGHIEMConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.THITRACNGHIEM.Properties.Settings.GlobalReference.Default.TRACNGHIEMConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_LAYMAKHOATableAdapter" GeneratorDataComponentClassName="V_LAYMAKHOATableAdapter" Name="V_LAYMAKHOA" UserDataComponentName="V_LAYMAKHOATableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TRACNGHIEMConnectionString1 (Settings)" DbObjectName="TRACNGHIEM.dbo.V_LAYMAKHOA" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT MAKH FROM dbo.V_LAYMAKHOA</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MAKH" DataSetColumn="MAKH" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSMK" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DSMK" msprop:Generator_UserDSName="DSMK">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="V_LAYMAKHOA" msprop:Generator_TableClassName="V_LAYMAKHOADataTable" msprop:Generator_TableVarName="tableV_LAYMAKHOA" msprop:Generator_TablePropName="V_LAYMAKHOA" msprop:Generator_RowDeletingName="V_LAYMAKHOARowDeleting" msprop:Generator_RowChangingName="V_LAYMAKHOARowChanging" msprop:Generator_RowEvHandlerName="V_LAYMAKHOARowChangeEventHandler" msprop:Generator_RowDeletedName="V_LAYMAKHOARowDeleted" msprop:Generator_UserTableName="V_LAYMAKHOA" msprop:Generator_RowChangedName="V_LAYMAKHOARowChanged" msprop:Generator_RowEvArgName="V_LAYMAKHOARowChangeEvent" msprop:Generator_RowClassName="V_LAYMAKHOARow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MAKH" msprop:Generator_ColumnVarNameInTable="columnMAKH" msprop:Generator_ColumnPropNameInRow="MAKH" msprop:Generator_ColumnPropNameInTable="MAKHColumn" msprop:Generator_UserColumnName="MAKH">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:V_LAYMAKHOA" />
+      <xs:field xpath="mstns:MAKH" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
