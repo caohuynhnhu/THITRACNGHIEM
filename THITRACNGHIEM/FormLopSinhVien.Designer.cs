@@ -747,7 +747,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "FormLopSinhVien";
-            this.Text = "FormLopSinhVien";
+            this.Text = "Lớp Sinh Viên";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormLopSinhVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
