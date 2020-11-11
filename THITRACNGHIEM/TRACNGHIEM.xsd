@@ -935,6 +935,22 @@ SELECT MATRINHDO, TENTRINHDO FROM TRINHDO WHERE (MATRINHDO = @MATRINHDO)</Comman
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_LAYMAKHOATableAdapter" GeneratorDataComponentClassName="V_LAYMAKHOATableAdapter" Name="V_LAYMAKHOA" UserDataComponentName="V_LAYMAKHOATableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="TRACNGHIEMConnectionString1 (Settings)" DbObjectName="TRACNGHIEM.dbo.V_LAYMAKHOA" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT MAKH FROM dbo.V_LAYMAKHOA</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MAKH" DataSetColumn="MAKH" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -943,7 +959,7 @@ SELECT MATRINHDO, TENTRINHDO FROM TRINHDO WHERE (MATRINHDO = @MATRINHDO)</Comman
   <xs:element name="TRACNGHIEM" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="TRACNGHIEM" msprop:Generator_UserDSName="TRACNGHIEM">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="CAUHOI" msprop:Generator_TableClassName="CAUHOIDataTable" msprop:Generator_TableVarName="tableCAUHOI" msprop:Generator_TablePropName="CAUHOI" msprop:Generator_RowDeletingName="CAUHOIRowDeleting" msprop:Generator_RowChangingName="CAUHOIRowChanging" msprop:Generator_RowEvHandlerName="CAUHOIRowChangeEventHandler" msprop:Generator_RowDeletedName="CAUHOIRowDeleted" msprop:Generator_UserTableName="CAUHOI" msprop:Generator_RowChangedName="CAUHOIRowChanged" msprop:Generator_RowEvArgName="CAUHOIRowChangeEvent" msprop:Generator_RowClassName="CAUHOIRow">
+        <xs:element name="CAUHOI" msprop:Generator_TableClassName="CAUHOIDataTable" msprop:Generator_TableVarName="tableCAUHOI" msprop:Generator_RowChangedName="CAUHOIRowChanged" msprop:Generator_TablePropName="CAUHOI" msprop:Generator_RowDeletingName="CAUHOIRowDeleting" msprop:Generator_RowChangingName="CAUHOIRowChanging" msprop:Generator_RowEvHandlerName="CAUHOIRowChangeEventHandler" msprop:Generator_RowDeletedName="CAUHOIRowDeleted" msprop:Generator_RowClassName="CAUHOIRow" msprop:Generator_UserTableName="CAUHOI" msprop:Generator_RowEvArgName="CAUHOIRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MACH" msprop:Generator_ColumnVarNameInTable="columnMACH" msprop:Generator_ColumnPropNameInRow="MACH" msprop:Generator_ColumnPropNameInTable="MACHColumn" msprop:Generator_UserColumnName="MACH">
@@ -998,7 +1014,7 @@ SELECT MATRINHDO, TENTRINHDO FROM TRINHDO WHERE (MATRINHDO = @MATRINHDO)</Comman
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="COSO" msprop:Generator_TableClassName="COSODataTable" msprop:Generator_TableVarName="tableCOSO" msprop:Generator_TablePropName="COSO" msprop:Generator_RowDeletingName="COSORowDeleting" msprop:Generator_RowChangingName="COSORowChanging" msprop:Generator_RowEvHandlerName="COSORowChangeEventHandler" msprop:Generator_RowDeletedName="COSORowDeleted" msprop:Generator_UserTableName="COSO" msprop:Generator_RowChangedName="COSORowChanged" msprop:Generator_RowEvArgName="COSORowChangeEvent" msprop:Generator_RowClassName="COSORow">
+        <xs:element name="COSO" msprop:Generator_TableClassName="COSODataTable" msprop:Generator_TableVarName="tableCOSO" msprop:Generator_RowChangedName="COSORowChanged" msprop:Generator_TablePropName="COSO" msprop:Generator_RowDeletingName="COSORowDeleting" msprop:Generator_RowChangingName="COSORowChanging" msprop:Generator_RowEvHandlerName="COSORowChangeEventHandler" msprop:Generator_RowDeletedName="COSORowDeleted" msprop:Generator_RowClassName="COSORow" msprop:Generator_UserTableName="COSO" msprop:Generator_RowEvArgName="COSORowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MACS" msprop:Generator_ColumnVarNameInTable="columnMACS" msprop:Generator_ColumnPropNameInRow="MACS" msprop:Generator_ColumnPropNameInTable="MACSColumn" msprop:Generator_UserColumnName="MACS">
@@ -1025,7 +1041,7 @@ SELECT MATRINHDO, TENTRINHDO FROM TRINHDO WHERE (MATRINHDO = @MATRINHDO)</Comman
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="CTBAITHI" msprop:Generator_TableClassName="CTBAITHIDataTable" msprop:Generator_TableVarName="tableCTBAITHI" msprop:Generator_TablePropName="CTBAITHI" msprop:Generator_RowDeletingName="CTBAITHIRowDeleting" msprop:Generator_RowChangingName="CTBAITHIRowChanging" msprop:Generator_RowEvHandlerName="CTBAITHIRowChangeEventHandler" msprop:Generator_RowDeletedName="CTBAITHIRowDeleted" msprop:Generator_UserTableName="CTBAITHI" msprop:Generator_RowChangedName="CTBAITHIRowChanged" msprop:Generator_RowEvArgName="CTBAITHIRowChangeEvent" msprop:Generator_RowClassName="CTBAITHIRow">
+        <xs:element name="CTBAITHI" msprop:Generator_TableClassName="CTBAITHIDataTable" msprop:Generator_TableVarName="tableCTBAITHI" msprop:Generator_RowChangedName="CTBAITHIRowChanged" msprop:Generator_TablePropName="CTBAITHI" msprop:Generator_RowDeletingName="CTBAITHIRowDeleting" msprop:Generator_RowChangingName="CTBAITHIRowChanging" msprop:Generator_RowEvHandlerName="CTBAITHIRowChangeEventHandler" msprop:Generator_RowDeletedName="CTBAITHIRowDeleted" msprop:Generator_RowClassName="CTBAITHIRow" msprop:Generator_UserTableName="CTBAITHI" msprop:Generator_RowEvArgName="CTBAITHIRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IDTHI" msprop:Generator_ColumnVarNameInTable="columnIDTHI" msprop:Generator_ColumnPropNameInRow="IDTHI" msprop:Generator_ColumnPropNameInTable="IDTHIColumn" msprop:Generator_UserColumnName="IDTHI" type="xs:int" />
@@ -1040,7 +1056,7 @@ SELECT MATRINHDO, TENTRINHDO FROM TRINHDO WHERE (MATRINHDO = @MATRINHDO)</Comman
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DANGKY" msprop:Generator_TableClassName="DANGKYDataTable" msprop:Generator_TableVarName="tableDANGKY" msprop:Generator_TablePropName="DANGKY" msprop:Generator_RowDeletingName="DANGKYRowDeleting" msprop:Generator_RowChangingName="DANGKYRowChanging" msprop:Generator_RowEvHandlerName="DANGKYRowChangeEventHandler" msprop:Generator_RowDeletedName="DANGKYRowDeleted" msprop:Generator_UserTableName="DANGKY" msprop:Generator_RowChangedName="DANGKYRowChanged" msprop:Generator_RowEvArgName="DANGKYRowChangeEvent" msprop:Generator_RowClassName="DANGKYRow">
+        <xs:element name="DANGKY" msprop:Generator_TableClassName="DANGKYDataTable" msprop:Generator_TableVarName="tableDANGKY" msprop:Generator_RowChangedName="DANGKYRowChanged" msprop:Generator_TablePropName="DANGKY" msprop:Generator_RowDeletingName="DANGKYRowDeleting" msprop:Generator_RowChangingName="DANGKYRowChanging" msprop:Generator_RowEvHandlerName="DANGKYRowChangeEventHandler" msprop:Generator_RowDeletedName="DANGKYRowDeleted" msprop:Generator_RowClassName="DANGKYRow" msprop:Generator_UserTableName="DANGKY" msprop:Generator_RowEvArgName="DANGKYRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MAMH" msprop:Generator_ColumnVarNameInTable="columnMAMH" msprop:Generator_ColumnPropNameInRow="MAMH" msprop:Generator_ColumnPropNameInTable="MAMHColumn" msprop:Generator_UserColumnName="MAMH">
@@ -1078,7 +1094,7 @@ SELECT MATRINHDO, TENTRINHDO FROM TRINHDO WHERE (MATRINHDO = @MATRINHDO)</Comman
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="GIANGVIEN" msprop:Generator_TableClassName="GIANGVIENDataTable" msprop:Generator_TableVarName="tableGIANGVIEN" msprop:Generator_TablePropName="GIANGVIEN" msprop:Generator_RowDeletingName="GIANGVIENRowDeleting" msprop:Generator_RowChangingName="GIANGVIENRowChanging" msprop:Generator_RowEvHandlerName="GIANGVIENRowChangeEventHandler" msprop:Generator_RowDeletedName="GIANGVIENRowDeleted" msprop:Generator_UserTableName="GIANGVIEN" msprop:Generator_RowChangedName="GIANGVIENRowChanged" msprop:Generator_RowEvArgName="GIANGVIENRowChangeEvent" msprop:Generator_RowClassName="GIANGVIENRow">
+        <xs:element name="GIANGVIEN" msprop:Generator_TableClassName="GIANGVIENDataTable" msprop:Generator_TableVarName="tableGIANGVIEN" msprop:Generator_RowChangedName="GIANGVIENRowChanged" msprop:Generator_TablePropName="GIANGVIEN" msprop:Generator_RowDeletingName="GIANGVIENRowDeleting" msprop:Generator_RowChangingName="GIANGVIENRowChanging" msprop:Generator_RowEvHandlerName="GIANGVIENRowChangeEventHandler" msprop:Generator_RowDeletedName="GIANGVIENRowDeleted" msprop:Generator_RowClassName="GIANGVIENRow" msprop:Generator_UserTableName="GIANGVIEN" msprop:Generator_RowEvArgName="GIANGVIENRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MAGV" msprop:Generator_ColumnVarNameInTable="columnMAGV" msprop:Generator_ColumnPropNameInRow="MAGV" msprop:Generator_ColumnPropNameInTable="MAGVColumn" msprop:Generator_UserColumnName="MAGV">
@@ -1119,7 +1135,7 @@ SELECT MATRINHDO, TENTRINHDO FROM TRINHDO WHERE (MATRINHDO = @MATRINHDO)</Comman
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="GV_DAY" msprop:Generator_TableClassName="GV_DAYDataTable" msprop:Generator_TableVarName="tableGV_DAY" msprop:Generator_TablePropName="GV_DAY" msprop:Generator_RowDeletingName="GV_DAYRowDeleting" msprop:Generator_RowChangingName="GV_DAYRowChanging" msprop:Generator_RowEvHandlerName="GV_DAYRowChangeEventHandler" msprop:Generator_RowDeletedName="GV_DAYRowDeleted" msprop:Generator_UserTableName="GV_DAY" msprop:Generator_RowChangedName="GV_DAYRowChanged" msprop:Generator_RowEvArgName="GV_DAYRowChangeEvent" msprop:Generator_RowClassName="GV_DAYRow">
+        <xs:element name="GV_DAY" msprop:Generator_TableClassName="GV_DAYDataTable" msprop:Generator_TableVarName="tableGV_DAY" msprop:Generator_RowChangedName="GV_DAYRowChanged" msprop:Generator_TablePropName="GV_DAY" msprop:Generator_RowDeletingName="GV_DAYRowDeleting" msprop:Generator_RowChangingName="GV_DAYRowChanging" msprop:Generator_RowEvHandlerName="GV_DAYRowChangeEventHandler" msprop:Generator_RowDeletedName="GV_DAYRowDeleted" msprop:Generator_RowClassName="GV_DAYRow" msprop:Generator_UserTableName="GV_DAY" msprop:Generator_RowEvArgName="GV_DAYRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MAMH" msprop:Generator_ColumnVarNameInTable="columnMAMH" msprop:Generator_ColumnPropNameInRow="MAMH" msprop:Generator_ColumnPropNameInTable="MAMHColumn" msprop:Generator_UserColumnName="MAMH">
@@ -1149,7 +1165,7 @@ SELECT MATRINHDO, TENTRINHDO FROM TRINHDO WHERE (MATRINHDO = @MATRINHDO)</Comman
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="KHOA" msprop:Generator_TableClassName="KHOADataTable" msprop:Generator_TableVarName="tableKHOA" msprop:Generator_TablePropName="KHOA" msprop:Generator_RowDeletingName="KHOARowDeleting" msprop:Generator_RowChangingName="KHOARowChanging" msprop:Generator_RowEvHandlerName="KHOARowChangeEventHandler" msprop:Generator_RowDeletedName="KHOARowDeleted" msprop:Generator_UserTableName="KHOA" msprop:Generator_RowChangedName="KHOARowChanged" msprop:Generator_RowEvArgName="KHOARowChangeEvent" msprop:Generator_RowClassName="KHOARow">
+        <xs:element name="KHOA" msprop:Generator_TableClassName="KHOADataTable" msprop:Generator_TableVarName="tableKHOA" msprop:Generator_RowChangedName="KHOARowChanged" msprop:Generator_TablePropName="KHOA" msprop:Generator_RowDeletingName="KHOARowDeleting" msprop:Generator_RowChangingName="KHOARowChanging" msprop:Generator_RowEvHandlerName="KHOARowChangeEventHandler" msprop:Generator_RowDeletedName="KHOARowDeleted" msprop:Generator_RowClassName="KHOARow" msprop:Generator_UserTableName="KHOA" msprop:Generator_RowEvArgName="KHOARowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MAKH" msprop:Generator_ColumnVarNameInTable="columnMAKH" msprop:Generator_ColumnPropNameInRow="MAKH" msprop:Generator_ColumnPropNameInTable="MAKHColumn" msprop:Generator_UserColumnName="MAKH">
@@ -1176,7 +1192,7 @@ SELECT MATRINHDO, TENTRINHDO FROM TRINHDO WHERE (MATRINHDO = @MATRINHDO)</Comman
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="LAYBAITHI" msprop:Generator_TableClassName="LAYBAITHIDataTable" msprop:Generator_TableVarName="tableLAYBAITHI" msprop:Generator_TablePropName="LAYBAITHI" msprop:Generator_RowDeletingName="LAYBAITHIRowDeleting" msprop:Generator_RowChangingName="LAYBAITHIRowChanging" msprop:Generator_RowEvHandlerName="LAYBAITHIRowChangeEventHandler" msprop:Generator_RowDeletedName="LAYBAITHIRowDeleted" msprop:Generator_UserTableName="LAYBAITHI" msprop:Generator_RowChangedName="LAYBAITHIRowChanged" msprop:Generator_RowEvArgName="LAYBAITHIRowChangeEvent" msprop:Generator_RowClassName="LAYBAITHIRow">
+        <xs:element name="LAYBAITHI" msprop:Generator_TableClassName="LAYBAITHIDataTable" msprop:Generator_TableVarName="tableLAYBAITHI" msprop:Generator_RowChangedName="LAYBAITHIRowChanged" msprop:Generator_TablePropName="LAYBAITHI" msprop:Generator_RowDeletingName="LAYBAITHIRowDeleting" msprop:Generator_RowChangingName="LAYBAITHIRowChanging" msprop:Generator_RowEvHandlerName="LAYBAITHIRowChangeEventHandler" msprop:Generator_RowDeletedName="LAYBAITHIRowDeleted" msprop:Generator_RowClassName="LAYBAITHIRow" msprop:Generator_UserTableName="LAYBAITHI" msprop:Generator_RowEvArgName="LAYBAITHIRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IDDK" msprop:Generator_ColumnVarNameInTable="columnIDDK" msprop:Generator_ColumnPropNameInRow="IDDK" msprop:Generator_ColumnPropNameInTable="IDDKColumn" msprop:Generator_UserColumnName="IDDK" type="xs:int" />
@@ -1191,7 +1207,7 @@ SELECT MATRINHDO, TENTRINHDO FROM TRINHDO WHERE (MATRINHDO = @MATRINHDO)</Comman
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="LOP" msprop:Generator_TableClassName="LOPDataTable" msprop:Generator_TableVarName="tableLOP" msprop:Generator_TablePropName="LOP" msprop:Generator_RowDeletingName="LOPRowDeleting" msprop:Generator_RowChangingName="LOPRowChanging" msprop:Generator_RowEvHandlerName="LOPRowChangeEventHandler" msprop:Generator_RowDeletedName="LOPRowDeleted" msprop:Generator_UserTableName="LOP" msprop:Generator_RowChangedName="LOPRowChanged" msprop:Generator_RowEvArgName="LOPRowChangeEvent" msprop:Generator_RowClassName="LOPRow">
+        <xs:element name="LOP" msprop:Generator_TableClassName="LOPDataTable" msprop:Generator_TableVarName="tableLOP" msprop:Generator_RowChangedName="LOPRowChanged" msprop:Generator_TablePropName="LOP" msprop:Generator_RowDeletingName="LOPRowDeleting" msprop:Generator_RowChangingName="LOPRowChanging" msprop:Generator_RowEvHandlerName="LOPRowChangeEventHandler" msprop:Generator_RowDeletedName="LOPRowDeleted" msprop:Generator_RowClassName="LOPRow" msprop:Generator_UserTableName="LOP" msprop:Generator_RowEvArgName="LOPRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MALOP" msprop:Generator_ColumnVarNameInTable="columnMALOP" msprop:Generator_ColumnPropNameInRow="MALOP" msprop:Generator_ColumnPropNameInTable="MALOPColumn" msprop:Generator_UserColumnName="MALOP">
@@ -1218,7 +1234,7 @@ SELECT MATRINHDO, TENTRINHDO FROM TRINHDO WHERE (MATRINHDO = @MATRINHDO)</Comman
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="LUACHON" msprop:Generator_TableClassName="LUACHONDataTable" msprop:Generator_TableVarName="tableLUACHON" msprop:Generator_TablePropName="LUACHON" msprop:Generator_RowDeletingName="LUACHONRowDeleting" msprop:Generator_RowChangingName="LUACHONRowChanging" msprop:Generator_RowEvHandlerName="LUACHONRowChangeEventHandler" msprop:Generator_RowDeletedName="LUACHONRowDeleted" msprop:Generator_UserTableName="LUACHON" msprop:Generator_RowChangedName="LUACHONRowChanged" msprop:Generator_RowEvArgName="LUACHONRowChangeEvent" msprop:Generator_RowClassName="LUACHONRow">
+        <xs:element name="LUACHON" msprop:Generator_TableClassName="LUACHONDataTable" msprop:Generator_TableVarName="tableLUACHON" msprop:Generator_RowChangedName="LUACHONRowChanged" msprop:Generator_TablePropName="LUACHON" msprop:Generator_RowDeletingName="LUACHONRowDeleting" msprop:Generator_RowChangingName="LUACHONRowChanging" msprop:Generator_RowEvHandlerName="LUACHONRowChangeEventHandler" msprop:Generator_RowDeletedName="LUACHONRowDeleted" msprop:Generator_RowClassName="LUACHONRow" msprop:Generator_UserTableName="LUACHON" msprop:Generator_RowEvArgName="LUACHONRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MALC" msprop:Generator_ColumnVarNameInTable="columnMALC" msprop:Generator_ColumnPropNameInRow="MALC" msprop:Generator_ColumnPropNameInTable="MALCColumn" msprop:Generator_UserColumnName="MALC" type="xs:int" />
@@ -1246,7 +1262,7 @@ SELECT MATRINHDO, TENTRINHDO FROM TRINHDO WHERE (MATRINHDO = @MATRINHDO)</Comman
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="MONHOC" msprop:Generator_TableClassName="MONHOCDataTable" msprop:Generator_TableVarName="tableMONHOC" msprop:Generator_TablePropName="MONHOC" msprop:Generator_RowDeletingName="MONHOCRowDeleting" msprop:Generator_RowChangingName="MONHOCRowChanging" msprop:Generator_RowEvHandlerName="MONHOCRowChangeEventHandler" msprop:Generator_RowDeletedName="MONHOCRowDeleted" msprop:Generator_UserTableName="MONHOC" msprop:Generator_RowChangedName="MONHOCRowChanged" msprop:Generator_RowEvArgName="MONHOCRowChangeEvent" msprop:Generator_RowClassName="MONHOCRow">
+        <xs:element name="MONHOC" msprop:Generator_TableClassName="MONHOCDataTable" msprop:Generator_TableVarName="tableMONHOC" msprop:Generator_RowChangedName="MONHOCRowChanged" msprop:Generator_TablePropName="MONHOC" msprop:Generator_RowDeletingName="MONHOCRowDeleting" msprop:Generator_RowChangingName="MONHOCRowChanging" msprop:Generator_RowEvHandlerName="MONHOCRowChangeEventHandler" msprop:Generator_RowDeletedName="MONHOCRowDeleted" msprop:Generator_RowClassName="MONHOCRow" msprop:Generator_UserTableName="MONHOC" msprop:Generator_RowEvArgName="MONHOCRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MAMH" msprop:Generator_ColumnVarNameInTable="columnMAMH" msprop:Generator_ColumnPropNameInRow="MAMH" msprop:Generator_ColumnPropNameInTable="MAMHColumn" msprop:Generator_UserColumnName="MAMH">
@@ -1273,7 +1289,7 @@ SELECT MATRINHDO, TENTRINHDO FROM TRINHDO WHERE (MATRINHDO = @MATRINHDO)</Comman
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="NHANVIENPGV" msprop:Generator_TableClassName="NHANVIENPGVDataTable" msprop:Generator_TableVarName="tableNHANVIENPGV" msprop:Generator_TablePropName="NHANVIENPGV" msprop:Generator_RowDeletingName="NHANVIENPGVRowDeleting" msprop:Generator_RowChangingName="NHANVIENPGVRowChanging" msprop:Generator_RowEvHandlerName="NHANVIENPGVRowChangeEventHandler" msprop:Generator_RowDeletedName="NHANVIENPGVRowDeleted" msprop:Generator_UserTableName="NHANVIENPGV" msprop:Generator_RowChangedName="NHANVIENPGVRowChanged" msprop:Generator_RowEvArgName="NHANVIENPGVRowChangeEvent" msprop:Generator_RowClassName="NHANVIENPGVRow">
+        <xs:element name="NHANVIENPGV" msprop:Generator_TableClassName="NHANVIENPGVDataTable" msprop:Generator_TableVarName="tableNHANVIENPGV" msprop:Generator_RowChangedName="NHANVIENPGVRowChanged" msprop:Generator_TablePropName="NHANVIENPGV" msprop:Generator_RowDeletingName="NHANVIENPGVRowDeleting" msprop:Generator_RowChangingName="NHANVIENPGVRowChanging" msprop:Generator_RowEvHandlerName="NHANVIENPGVRowChangeEventHandler" msprop:Generator_RowDeletedName="NHANVIENPGVRowDeleted" msprop:Generator_RowClassName="NHANVIENPGVRow" msprop:Generator_UserTableName="NHANVIENPGV" msprop:Generator_RowEvArgName="NHANVIENPGVRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MANV" msprop:Generator_ColumnVarNameInTable="columnMANV" msprop:Generator_ColumnPropNameInRow="MANV" msprop:Generator_ColumnPropNameInTable="MANVColumn" msprop:Generator_UserColumnName="MANV">
@@ -1307,7 +1323,7 @@ SELECT MATRINHDO, TENTRINHDO FROM TRINHDO WHERE (MATRINHDO = @MATRINHDO)</Comman
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="SINHVIEN" msprop:Generator_TableClassName="SINHVIENDataTable" msprop:Generator_TableVarName="tableSINHVIEN" msprop:Generator_TablePropName="SINHVIEN" msprop:Generator_RowDeletingName="SINHVIENRowDeleting" msprop:Generator_RowChangingName="SINHVIENRowChanging" msprop:Generator_RowEvHandlerName="SINHVIENRowChangeEventHandler" msprop:Generator_RowDeletedName="SINHVIENRowDeleted" msprop:Generator_UserTableName="SINHVIEN" msprop:Generator_RowChangedName="SINHVIENRowChanged" msprop:Generator_RowEvArgName="SINHVIENRowChangeEvent" msprop:Generator_RowClassName="SINHVIENRow">
+        <xs:element name="SINHVIEN" msprop:Generator_TableClassName="SINHVIENDataTable" msprop:Generator_TableVarName="tableSINHVIEN" msprop:Generator_RowChangedName="SINHVIENRowChanged" msprop:Generator_TablePropName="SINHVIEN" msprop:Generator_RowDeletingName="SINHVIENRowDeleting" msprop:Generator_RowChangingName="SINHVIENRowChanging" msprop:Generator_RowEvHandlerName="SINHVIENRowChangeEventHandler" msprop:Generator_RowDeletedName="SINHVIENRowDeleted" msprop:Generator_RowClassName="SINHVIENRow" msprop:Generator_UserTableName="SINHVIEN" msprop:Generator_RowEvArgName="SINHVIENRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MASV" msprop:Generator_ColumnVarNameInTable="columnMASV" msprop:Generator_ColumnPropNameInRow="MASV" msprop:Generator_ColumnPropNameInTable="MASVColumn" msprop:Generator_UserColumnName="MASV">
@@ -1349,7 +1365,7 @@ SELECT MATRINHDO, TENTRINHDO FROM TRINHDO WHERE (MATRINHDO = @MATRINHDO)</Comman
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="THI" msprop:Generator_TableClassName="THIDataTable" msprop:Generator_TableVarName="tableTHI" msprop:Generator_TablePropName="THI" msprop:Generator_RowDeletingName="THIRowDeleting" msprop:Generator_RowChangingName="THIRowChanging" msprop:Generator_RowEvHandlerName="THIRowChangeEventHandler" msprop:Generator_RowDeletedName="THIRowDeleted" msprop:Generator_UserTableName="THI" msprop:Generator_RowChangedName="THIRowChanged" msprop:Generator_RowEvArgName="THIRowChangeEvent" msprop:Generator_RowClassName="THIRow">
+        <xs:element name="THI" msprop:Generator_TableClassName="THIDataTable" msprop:Generator_TableVarName="tableTHI" msprop:Generator_RowChangedName="THIRowChanged" msprop:Generator_TablePropName="THI" msprop:Generator_RowDeletingName="THIRowDeleting" msprop:Generator_RowChangingName="THIRowChanging" msprop:Generator_RowEvHandlerName="THIRowChangeEventHandler" msprop:Generator_RowDeletedName="THIRowDeleted" msprop:Generator_RowClassName="THIRow" msprop:Generator_UserTableName="THI" msprop:Generator_RowEvArgName="THIRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MASV" msprop:Generator_ColumnVarNameInTable="columnMASV" msprop:Generator_ColumnPropNameInRow="MASV" msprop:Generator_ColumnPropNameInTable="MASVColumn" msprop:Generator_UserColumnName="MASV">
@@ -1365,7 +1381,7 @@ SELECT MATRINHDO, TENTRINHDO FROM TRINHDO WHERE (MATRINHDO = @MATRINHDO)</Comman
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TRINHDO" msprop:Generator_TableClassName="TRINHDODataTable" msprop:Generator_TableVarName="tableTRINHDO" msprop:Generator_TablePropName="TRINHDO" msprop:Generator_RowDeletingName="TRINHDORowDeleting" msprop:Generator_RowChangingName="TRINHDORowChanging" msprop:Generator_RowEvHandlerName="TRINHDORowChangeEventHandler" msprop:Generator_RowDeletedName="TRINHDORowDeleted" msprop:Generator_UserTableName="TRINHDO" msprop:Generator_RowChangedName="TRINHDORowChanged" msprop:Generator_RowEvArgName="TRINHDORowChangeEvent" msprop:Generator_RowClassName="TRINHDORow">
+        <xs:element name="TRINHDO" msprop:Generator_TableClassName="TRINHDODataTable" msprop:Generator_TableVarName="tableTRINHDO" msprop:Generator_RowChangedName="TRINHDORowChanged" msprop:Generator_TablePropName="TRINHDO" msprop:Generator_RowDeletingName="TRINHDORowDeleting" msprop:Generator_RowChangingName="TRINHDORowChanging" msprop:Generator_RowEvHandlerName="TRINHDORowChangeEventHandler" msprop:Generator_RowDeletedName="TRINHDORowDeleted" msprop:Generator_RowClassName="TRINHDORow" msprop:Generator_UserTableName="TRINHDO" msprop:Generator_RowEvArgName="TRINHDORowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MATRINHDO" msprop:Generator_ColumnVarNameInTable="columnMATRINHDO" msprop:Generator_ColumnPropNameInRow="MATRINHDO" msprop:Generator_ColumnPropNameInTable="MATRINHDOColumn" msprop:Generator_UserColumnName="MATRINHDO">
@@ -1379,6 +1395,19 @@ SELECT MATRINHDO, TENTRINHDO FROM TRINHDO WHERE (MATRINHDO = @MATRINHDO)</Comman
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="V_LAYMAKHOA" msprop:Generator_TableClassName="V_LAYMAKHOADataTable" msprop:Generator_TableVarName="tableV_LAYMAKHOA" msprop:Generator_TablePropName="V_LAYMAKHOA" msprop:Generator_RowDeletingName="V_LAYMAKHOARowDeleting" msprop:Generator_RowChangingName="V_LAYMAKHOARowChanging" msprop:Generator_RowEvHandlerName="V_LAYMAKHOARowChangeEventHandler" msprop:Generator_RowDeletedName="V_LAYMAKHOARowDeleted" msprop:Generator_UserTableName="V_LAYMAKHOA" msprop:Generator_RowChangedName="V_LAYMAKHOARowChanged" msprop:Generator_RowEvArgName="V_LAYMAKHOARowChangeEvent" msprop:Generator_RowClassName="V_LAYMAKHOARow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MAKH" msprop:Generator_ColumnVarNameInTable="columnMAKH" msprop:Generator_ColumnPropNameInRow="MAKH" msprop:Generator_ColumnPropNameInTable="MAKHColumn" msprop:Generator_UserColumnName="MAKH">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -1453,30 +1482,34 @@ SELECT MATRINHDO, TENTRINHDO FROM TRINHDO WHERE (MATRINHDO = @MATRINHDO)</Comman
       <xs:selector xpath=".//mstns:TRINHDO" />
       <xs:field xpath="mstns:MATRINHDO" />
     </xs:unique>
+    <xs:unique name="V_LAYMAKHOA_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:V_LAYMAKHOA" />
+      <xs:field xpath="mstns:MAKH" />
+    </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_CAUHOI_GIANGVIEN" msdata:parent="GIANGVIEN" msdata:child="CAUHOI" msdata:parentkey="MAGV" msdata:childkey="MAGV" msprop:Generator_UserChildTable="CAUHOI" msprop:Generator_ChildPropName="GetCAUHOIRows" msprop:Generator_UserRelationName="FK_CAUHOI_GIANGVIEN" msprop:Generator_RelationVarName="relationFK_CAUHOI_GIANGVIEN" msprop:Generator_UserParentTable="GIANGVIEN" msprop:Generator_ParentPropName="GIANGVIENRow" />
-      <msdata:Relationship name="FK_CAUHOI_MONHOC" msdata:parent="MONHOC" msdata:child="CAUHOI" msdata:parentkey="MAMH" msdata:childkey="MAMH" msprop:Generator_UserChildTable="CAUHOI" msprop:Generator_ChildPropName="GetCAUHOIRows" msprop:Generator_UserRelationName="FK_CAUHOI_MONHOC" msprop:Generator_RelationVarName="relationFK_CAUHOI_MONHOC" msprop:Generator_UserParentTable="MONHOC" msprop:Generator_ParentPropName="MONHOCRow" />
-      <msdata:Relationship name="FK_CAUHOI_TRINHDO" msdata:parent="TRINHDO" msdata:child="CAUHOI" msdata:parentkey="MATRINHDO" msdata:childkey="MATRINHDO" msprop:Generator_UserChildTable="CAUHOI" msprop:Generator_ChildPropName="GetCAUHOIRows" msprop:Generator_UserRelationName="FK_CAUHOI_TRINHDO" msprop:Generator_RelationVarName="relationFK_CAUHOI_TRINHDO" msprop:Generator_UserParentTable="TRINHDO" msprop:Generator_ParentPropName="TRINHDORow" />
-      <msdata:Relationship name="FK_CTBAITHI_LAYBAITHI" msdata:parent="LAYBAITHI" msdata:child="CTBAITHI" msdata:parentkey="IDLBT" msdata:childkey="IDLBT" msprop:Generator_UserChildTable="CTBAITHI" msprop:Generator_ChildPropName="GetCTBAITHIRows" msprop:Generator_UserRelationName="FK_CTBAITHI_LAYBAITHI" msprop:Generator_RelationVarName="relationFK_CTBAITHI_LAYBAITHI" msprop:Generator_UserParentTable="LAYBAITHI" msprop:Generator_ParentPropName="LAYBAITHIRow" />
-      <msdata:Relationship name="FK_CTBAITHI_THI" msdata:parent="THI" msdata:child="CTBAITHI" msdata:parentkey="IDTHI" msdata:childkey="IDTHI" msprop:Generator_UserChildTable="CTBAITHI" msprop:Generator_ChildPropName="GetCTBAITHIRows" msprop:Generator_UserRelationName="FK_CTBAITHI_THI" msprop:Generator_RelationVarName="relationFK_CTBAITHI_THI" msprop:Generator_UserParentTable="THI" msprop:Generator_ParentPropName="THIRow" />
-      <msdata:Relationship name="FK_DANGKY_LOP" msdata:parent="LOP" msdata:child="DANGKY" msdata:parentkey="MALOP" msdata:childkey="MALOP" msprop:Generator_UserChildTable="DANGKY" msprop:Generator_ChildPropName="GetDANGKYRows" msprop:Generator_UserRelationName="FK_DANGKY_LOP" msprop:Generator_RelationVarName="relationFK_DANGKY_LOP" msprop:Generator_UserParentTable="LOP" msprop:Generator_ParentPropName="LOPRow" />
-      <msdata:Relationship name="FK_DANGKY_MONHOC" msdata:parent="MONHOC" msdata:child="DANGKY" msdata:parentkey="MAMH" msdata:childkey="MAMH" msprop:Generator_UserChildTable="DANGKY" msprop:Generator_ChildPropName="GetDANGKYRows" msprop:Generator_UserRelationName="FK_DANGKY_MONHOC" msprop:Generator_RelationVarName="relationFK_DANGKY_MONHOC" msprop:Generator_UserParentTable="MONHOC" msprop:Generator_ParentPropName="MONHOCRow" />
-      <msdata:Relationship name="FK_DANGKY_NHANVIENPGV" msdata:parent="NHANVIENPGV" msdata:child="DANGKY" msdata:parentkey="MANV" msdata:childkey="MANV" msprop:Generator_UserChildTable="DANGKY" msprop:Generator_ChildPropName="GetDANGKYRows" msprop:Generator_UserRelationName="FK_DANGKY_NHANVIENPGV" msprop:Generator_RelationVarName="relationFK_DANGKY_NHANVIENPGV" msprop:Generator_UserParentTable="NHANVIENPGV" msprop:Generator_ParentPropName="NHANVIENPGVRow" />
-      <msdata:Relationship name="FK_GV_DAY_GIANGVIEN" msdata:parent="GIANGVIEN" msdata:child="GV_DAY" msdata:parentkey="MAGV" msdata:childkey="MAGV" msprop:Generator_UserChildTable="GV_DAY" msprop:Generator_ChildPropName="GetGV_DAYRows" msprop:Generator_UserRelationName="FK_GV_DAY_GIANGVIEN" msprop:Generator_ParentPropName="GIANGVIENRow" msprop:Generator_RelationVarName="relationFK_GV_DAY_GIANGVIEN" msprop:Generator_UserParentTable="GIANGVIEN" />
-      <msdata:Relationship name="FK_GV_DAY_LOP" msdata:parent="LOP" msdata:child="GV_DAY" msdata:parentkey="MALOP" msdata:childkey="MALOP" msprop:Generator_UserChildTable="GV_DAY" msprop:Generator_ChildPropName="GetGV_DAYRows" msprop:Generator_UserRelationName="FK_GV_DAY_LOP" msprop:Generator_RelationVarName="relationFK_GV_DAY_LOP" msprop:Generator_UserParentTable="LOP" msprop:Generator_ParentPropName="LOPRow" />
-      <msdata:Relationship name="FK_GV_DAY_MONHOC" msdata:parent="MONHOC" msdata:child="GV_DAY" msdata:parentkey="MAMH" msdata:childkey="MAMH" msprop:Generator_UserChildTable="GV_DAY" msprop:Generator_ChildPropName="GetGV_DAYRows" msprop:Generator_UserRelationName="FK_GV_DAY_MONHOC" msprop:Generator_RelationVarName="relationFK_GV_DAY_MONHOC" msprop:Generator_UserParentTable="MONHOC" msprop:Generator_ParentPropName="MONHOCRow" />
-      <msdata:Relationship name="FK_KHOA_COSO" msdata:parent="COSO" msdata:child="KHOA" msdata:parentkey="MACS" msdata:childkey="MACS" msprop:Generator_UserChildTable="KHOA" msprop:Generator_ChildPropName="GetKHOARows" msprop:Generator_UserRelationName="FK_KHOA_COSO" msprop:Generator_ParentPropName="COSORow" msprop:Generator_RelationVarName="relationFK_KHOA_COSO" msprop:Generator_UserParentTable="COSO" />
-      <msdata:Relationship name="FK_LAYBAITHI_CAUHOI" msdata:parent="CAUHOI" msdata:child="LAYBAITHI" msdata:parentkey="MACH" msdata:childkey="MACH" msprop:Generator_UserChildTable="LAYBAITHI" msprop:Generator_ChildPropName="GetLAYBAITHIRows" msprop:Generator_UserRelationName="FK_LAYBAITHI_CAUHOI" msprop:Generator_ParentPropName="CAUHOIRow" msprop:Generator_RelationVarName="relationFK_LAYBAITHI_CAUHOI" msprop:Generator_UserParentTable="CAUHOI" />
-      <msdata:Relationship name="FK_LAYBAITHI_DANGKY" msdata:parent="DANGKY" msdata:child="LAYBAITHI" msdata:parentkey="IDDK" msdata:childkey="IDDK" msprop:Generator_UserChildTable="LAYBAITHI" msprop:Generator_ChildPropName="GetLAYBAITHIRows" msprop:Generator_UserRelationName="FK_LAYBAITHI_DANGKY" msprop:Generator_ParentPropName="DANGKYRow" msprop:Generator_RelationVarName="relationFK_LAYBAITHI_DANGKY" msprop:Generator_UserParentTable="DANGKY" />
-      <msdata:Relationship name="FK_LOP_KHOA" msdata:parent="KHOA" msdata:child="LOP" msdata:parentkey="MAKH" msdata:childkey="MAKH" msprop:Generator_UserChildTable="LOP" msprop:Generator_ChildPropName="GetLOPRows" msprop:Generator_UserRelationName="FK_LOP_KHOA" msprop:Generator_ParentPropName="KHOARow" msprop:Generator_RelationVarName="relationFK_LOP_KHOA" msprop:Generator_UserParentTable="KHOA" />
-      <msdata:Relationship name="FK_LUACHON_CAUHOI" msdata:parent="CAUHOI" msdata:child="LUACHON" msdata:parentkey="MACH" msdata:childkey="MACH" msprop:Generator_UserChildTable="LUACHON" msprop:Generator_ChildPropName="GetLUACHONRows" msprop:Generator_UserRelationName="FK_LUACHON_CAUHOI" msprop:Generator_ParentPropName="CAUHOIRow" msprop:Generator_RelationVarName="relationFK_LUACHON_CAUHOI" msprop:Generator_UserParentTable="CAUHOI" />
-      <msdata:Relationship name="FK_MONHOC_KHOA" msdata:parent="KHOA" msdata:child="MONHOC" msdata:parentkey="MAKH" msdata:childkey="MAKH" msprop:Generator_UserChildTable="MONHOC" msprop:Generator_ChildPropName="GetMONHOCRows" msprop:Generator_UserRelationName="FK_MONHOC_KHOA" msprop:Generator_ParentPropName="KHOARow" msprop:Generator_RelationVarName="relationFK_MONHOC_KHOA" msprop:Generator_UserParentTable="KHOA" />
-      <msdata:Relationship name="FK_SINHVIEN_LOP" msdata:parent="LOP" msdata:child="SINHVIEN" msdata:parentkey="MALOP" msdata:childkey="MALOP" msprop:Generator_UserChildTable="SINHVIEN" msprop:Generator_ChildPropName="GetSINHVIENRows" msprop:Generator_UserRelationName="FK_SINHVIEN_LOP" msprop:Generator_ParentPropName="LOPRow" msprop:Generator_RelationVarName="relationFK_SINHVIEN_LOP" msprop:Generator_UserParentTable="LOP" />
-      <msdata:Relationship name="FK_THI_DANGKY" msdata:parent="DANGKY" msdata:child="THI" msdata:parentkey="IDDK" msdata:childkey="IDDK" msprop:Generator_UserChildTable="THI" msprop:Generator_ChildPropName="GetTHIRows" msprop:Generator_UserRelationName="FK_THI_DANGKY" msprop:Generator_ParentPropName="DANGKYRow" msprop:Generator_RelationVarName="relationFK_THI_DANGKY" msprop:Generator_UserParentTable="DANGKY" />
-      <msdata:Relationship name="FK_THI_SINHVIEN" msdata:parent="SINHVIEN" msdata:child="THI" msdata:parentkey="MASV" msdata:childkey="MASV" msprop:Generator_UserChildTable="THI" msprop:Generator_ChildPropName="GetTHIRows" msprop:Generator_UserRelationName="FK_THI_SINHVIEN" msprop:Generator_ParentPropName="SINHVIENRow" msprop:Generator_RelationVarName="relationFK_THI_SINHVIEN" msprop:Generator_UserParentTable="SINHVIEN" />
-      <msdata:Relationship name="FK_GIANGVIEN_KHOA" msdata:parent="KHOA" msdata:child="GIANGVIEN" msdata:parentkey="MAKH" msdata:childkey="MAKH" msprop:Generator_UserChildTable="GIANGVIEN" msprop:Generator_ChildPropName="GetGIANGVIENRows" msprop:Generator_UserRelationName="FK_GIANGVIEN_KHOA" msprop:Generator_ParentPropName="KHOARow" msprop:Generator_RelationVarName="relationFK_GIANGVIEN_KHOA" msprop:Generator_UserParentTable="KHOA" />
+      <msdata:Relationship name="FK_CAUHOI_GIANGVIEN" msdata:parent="GIANGVIEN" msdata:child="CAUHOI" msdata:parentkey="MAGV" msdata:childkey="MAGV" msprop:Generator_UserChildTable="CAUHOI" msprop:Generator_ChildPropName="GetCAUHOIRows" msprop:Generator_UserRelationName="FK_CAUHOI_GIANGVIEN" msprop:Generator_ParentPropName="GIANGVIENRow" msprop:Generator_RelationVarName="relationFK_CAUHOI_GIANGVIEN" msprop:Generator_UserParentTable="GIANGVIEN" />
+      <msdata:Relationship name="FK_CAUHOI_MONHOC" msdata:parent="MONHOC" msdata:child="CAUHOI" msdata:parentkey="MAMH" msdata:childkey="MAMH" msprop:Generator_UserChildTable="CAUHOI" msprop:Generator_ChildPropName="GetCAUHOIRows" msprop:Generator_UserRelationName="FK_CAUHOI_MONHOC" msprop:Generator_ParentPropName="MONHOCRow" msprop:Generator_RelationVarName="relationFK_CAUHOI_MONHOC" msprop:Generator_UserParentTable="MONHOC" />
+      <msdata:Relationship name="FK_CAUHOI_TRINHDO" msdata:parent="TRINHDO" msdata:child="CAUHOI" msdata:parentkey="MATRINHDO" msdata:childkey="MATRINHDO" msprop:Generator_UserChildTable="CAUHOI" msprop:Generator_ChildPropName="GetCAUHOIRows" msprop:Generator_UserRelationName="FK_CAUHOI_TRINHDO" msprop:Generator_ParentPropName="TRINHDORow" msprop:Generator_RelationVarName="relationFK_CAUHOI_TRINHDO" msprop:Generator_UserParentTable="TRINHDO" />
+      <msdata:Relationship name="FK_CTBAITHI_LAYBAITHI" msdata:parent="LAYBAITHI" msdata:child="CTBAITHI" msdata:parentkey="IDLBT" msdata:childkey="IDLBT" msprop:Generator_UserChildTable="CTBAITHI" msprop:Generator_ChildPropName="GetCTBAITHIRows" msprop:Generator_UserRelationName="FK_CTBAITHI_LAYBAITHI" msprop:Generator_ParentPropName="LAYBAITHIRow" msprop:Generator_RelationVarName="relationFK_CTBAITHI_LAYBAITHI" msprop:Generator_UserParentTable="LAYBAITHI" />
+      <msdata:Relationship name="FK_CTBAITHI_THI" msdata:parent="THI" msdata:child="CTBAITHI" msdata:parentkey="IDTHI" msdata:childkey="IDTHI" msprop:Generator_UserChildTable="CTBAITHI" msprop:Generator_ChildPropName="GetCTBAITHIRows" msprop:Generator_UserRelationName="FK_CTBAITHI_THI" msprop:Generator_ParentPropName="THIRow" msprop:Generator_RelationVarName="relationFK_CTBAITHI_THI" msprop:Generator_UserParentTable="THI" />
+      <msdata:Relationship name="FK_DANGKY_LOP" msdata:parent="LOP" msdata:child="DANGKY" msdata:parentkey="MALOP" msdata:childkey="MALOP" msprop:Generator_UserChildTable="DANGKY" msprop:Generator_ChildPropName="GetDANGKYRows" msprop:Generator_UserRelationName="FK_DANGKY_LOP" msprop:Generator_ParentPropName="LOPRow" msprop:Generator_RelationVarName="relationFK_DANGKY_LOP" msprop:Generator_UserParentTable="LOP" />
+      <msdata:Relationship name="FK_DANGKY_MONHOC" msdata:parent="MONHOC" msdata:child="DANGKY" msdata:parentkey="MAMH" msdata:childkey="MAMH" msprop:Generator_UserChildTable="DANGKY" msprop:Generator_ChildPropName="GetDANGKYRows" msprop:Generator_UserRelationName="FK_DANGKY_MONHOC" msprop:Generator_ParentPropName="MONHOCRow" msprop:Generator_RelationVarName="relationFK_DANGKY_MONHOC" msprop:Generator_UserParentTable="MONHOC" />
+      <msdata:Relationship name="FK_DANGKY_NHANVIENPGV" msdata:parent="NHANVIENPGV" msdata:child="DANGKY" msdata:parentkey="MANV" msdata:childkey="MANV" msprop:Generator_UserChildTable="DANGKY" msprop:Generator_ChildPropName="GetDANGKYRows" msprop:Generator_UserRelationName="FK_DANGKY_NHANVIENPGV" msprop:Generator_ParentPropName="NHANVIENPGVRow" msprop:Generator_RelationVarName="relationFK_DANGKY_NHANVIENPGV" msprop:Generator_UserParentTable="NHANVIENPGV" />
+      <msdata:Relationship name="FK_GV_DAY_GIANGVIEN" msdata:parent="GIANGVIEN" msdata:child="GV_DAY" msdata:parentkey="MAGV" msdata:childkey="MAGV" msprop:Generator_UserChildTable="GV_DAY" msprop:Generator_ChildPropName="GetGV_DAYRows" msprop:Generator_UserRelationName="FK_GV_DAY_GIANGVIEN" msprop:Generator_RelationVarName="relationFK_GV_DAY_GIANGVIEN" msprop:Generator_UserParentTable="GIANGVIEN" msprop:Generator_ParentPropName="GIANGVIENRow" />
+      <msdata:Relationship name="FK_GV_DAY_LOP" msdata:parent="LOP" msdata:child="GV_DAY" msdata:parentkey="MALOP" msdata:childkey="MALOP" msprop:Generator_UserChildTable="GV_DAY" msprop:Generator_ChildPropName="GetGV_DAYRows" msprop:Generator_UserRelationName="FK_GV_DAY_LOP" msprop:Generator_ParentPropName="LOPRow" msprop:Generator_RelationVarName="relationFK_GV_DAY_LOP" msprop:Generator_UserParentTable="LOP" />
+      <msdata:Relationship name="FK_GV_DAY_MONHOC" msdata:parent="MONHOC" msdata:child="GV_DAY" msdata:parentkey="MAMH" msdata:childkey="MAMH" msprop:Generator_UserChildTable="GV_DAY" msprop:Generator_ChildPropName="GetGV_DAYRows" msprop:Generator_UserRelationName="FK_GV_DAY_MONHOC" msprop:Generator_ParentPropName="MONHOCRow" msprop:Generator_RelationVarName="relationFK_GV_DAY_MONHOC" msprop:Generator_UserParentTable="MONHOC" />
+      <msdata:Relationship name="FK_KHOA_COSO" msdata:parent="COSO" msdata:child="KHOA" msdata:parentkey="MACS" msdata:childkey="MACS" msprop:Generator_UserChildTable="KHOA" msprop:Generator_ChildPropName="GetKHOARows" msprop:Generator_UserRelationName="FK_KHOA_COSO" msprop:Generator_RelationVarName="relationFK_KHOA_COSO" msprop:Generator_UserParentTable="COSO" msprop:Generator_ParentPropName="COSORow" />
+      <msdata:Relationship name="FK_LAYBAITHI_CAUHOI" msdata:parent="CAUHOI" msdata:child="LAYBAITHI" msdata:parentkey="MACH" msdata:childkey="MACH" msprop:Generator_UserChildTable="LAYBAITHI" msprop:Generator_ChildPropName="GetLAYBAITHIRows" msprop:Generator_UserRelationName="FK_LAYBAITHI_CAUHOI" msprop:Generator_RelationVarName="relationFK_LAYBAITHI_CAUHOI" msprop:Generator_UserParentTable="CAUHOI" msprop:Generator_ParentPropName="CAUHOIRow" />
+      <msdata:Relationship name="FK_LAYBAITHI_DANGKY" msdata:parent="DANGKY" msdata:child="LAYBAITHI" msdata:parentkey="IDDK" msdata:childkey="IDDK" msprop:Generator_UserChildTable="LAYBAITHI" msprop:Generator_ChildPropName="GetLAYBAITHIRows" msprop:Generator_UserRelationName="FK_LAYBAITHI_DANGKY" msprop:Generator_RelationVarName="relationFK_LAYBAITHI_DANGKY" msprop:Generator_UserParentTable="DANGKY" msprop:Generator_ParentPropName="DANGKYRow" />
+      <msdata:Relationship name="FK_LOP_KHOA" msdata:parent="KHOA" msdata:child="LOP" msdata:parentkey="MAKH" msdata:childkey="MAKH" msprop:Generator_UserChildTable="LOP" msprop:Generator_ChildPropName="GetLOPRows" msprop:Generator_UserRelationName="FK_LOP_KHOA" msprop:Generator_RelationVarName="relationFK_LOP_KHOA" msprop:Generator_UserParentTable="KHOA" msprop:Generator_ParentPropName="KHOARow" />
+      <msdata:Relationship name="FK_LUACHON_CAUHOI" msdata:parent="CAUHOI" msdata:child="LUACHON" msdata:parentkey="MACH" msdata:childkey="MACH" msprop:Generator_UserChildTable="LUACHON" msprop:Generator_ChildPropName="GetLUACHONRows" msprop:Generator_UserRelationName="FK_LUACHON_CAUHOI" msprop:Generator_RelationVarName="relationFK_LUACHON_CAUHOI" msprop:Generator_UserParentTable="CAUHOI" msprop:Generator_ParentPropName="CAUHOIRow" />
+      <msdata:Relationship name="FK_MONHOC_KHOA" msdata:parent="KHOA" msdata:child="MONHOC" msdata:parentkey="MAKH" msdata:childkey="MAKH" msprop:Generator_UserChildTable="MONHOC" msprop:Generator_ChildPropName="GetMONHOCRows" msprop:Generator_UserRelationName="FK_MONHOC_KHOA" msprop:Generator_RelationVarName="relationFK_MONHOC_KHOA" msprop:Generator_UserParentTable="KHOA" msprop:Generator_ParentPropName="KHOARow" />
+      <msdata:Relationship name="FK_SINHVIEN_LOP" msdata:parent="LOP" msdata:child="SINHVIEN" msdata:parentkey="MALOP" msdata:childkey="MALOP" msprop:Generator_UserChildTable="SINHVIEN" msprop:Generator_ChildPropName="GetSINHVIENRows" msprop:Generator_UserRelationName="FK_SINHVIEN_LOP" msprop:Generator_RelationVarName="relationFK_SINHVIEN_LOP" msprop:Generator_UserParentTable="LOP" msprop:Generator_ParentPropName="LOPRow" />
+      <msdata:Relationship name="FK_THI_DANGKY" msdata:parent="DANGKY" msdata:child="THI" msdata:parentkey="IDDK" msdata:childkey="IDDK" msprop:Generator_UserChildTable="THI" msprop:Generator_ChildPropName="GetTHIRows" msprop:Generator_UserRelationName="FK_THI_DANGKY" msprop:Generator_RelationVarName="relationFK_THI_DANGKY" msprop:Generator_UserParentTable="DANGKY" msprop:Generator_ParentPropName="DANGKYRow" />
+      <msdata:Relationship name="FK_THI_SINHVIEN" msdata:parent="SINHVIEN" msdata:child="THI" msdata:parentkey="MASV" msdata:childkey="MASV" msprop:Generator_UserChildTable="THI" msprop:Generator_ChildPropName="GetTHIRows" msprop:Generator_UserRelationName="FK_THI_SINHVIEN" msprop:Generator_RelationVarName="relationFK_THI_SINHVIEN" msprop:Generator_UserParentTable="SINHVIEN" msprop:Generator_ParentPropName="SINHVIENRow" />
+      <msdata:Relationship name="FK_GIANGVIEN_KHOA" msdata:parent="KHOA" msdata:child="GIANGVIEN" msdata:parentkey="MAKH" msdata:childkey="MAKH" msprop:Generator_UserChildTable="GIANGVIEN" msprop:Generator_ChildPropName="GetGIANGVIENRows" msprop:Generator_UserRelationName="FK_GIANGVIEN_KHOA" msprop:Generator_RelationVarName="relationFK_GIANGVIEN_KHOA" msprop:Generator_UserParentTable="KHOA" msprop:Generator_ParentPropName="KHOARow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

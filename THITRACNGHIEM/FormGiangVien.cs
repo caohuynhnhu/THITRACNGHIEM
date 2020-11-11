@@ -18,14 +18,16 @@ namespace THITRACNGHIEM
         {
             InitializeComponent();
         }
+        Boolean checkButton = false;
 
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            checkButton = true;
             bdsGV.AddNew();
-            gbGV.Enabled = true;
+            gbGV.Enabled = txtMAGV.Enabled = true;
             btnOk.Visible = btnHuy.Visible = true;
-            btnThoat.Enabled = btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = btnLoad.Enabled = btnLuu.Enabled = false;
-            //txtMAGV.Focus();
+            btnThoat.Enabled = btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = btnLoad.Enabled 
+                = btnLuu.Enabled = giangvienGridControl.Enabled = false;
         }
 
         private void gIANGVIENBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -38,29 +40,30 @@ namespace THITRACNGHIEM
 
         private void FormGiangVien_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'tRACNGHIEM.V_LAYMAKHOA' table. You can move, or remove it, as needed.
+            this.v_LAYMAKHOATableAdapter1.Connection.ConnectionString = Program.connstr;
+            this.v_LAYMAKHOATableAdapter1.Fill(this.tRACNGHIEM.V_LAYMAKHOA);
             // TODO: This line of code loads data into the 'tRACNGHIEM.GV_DAY' table. You can move, or remove it, as needed.
+            this.gV_DAYTableAdapter.Connection.ConnectionString = Program.connstr;
             this.gV_DAYTableAdapter.Fill(this.tRACNGHIEM.GV_DAY);
             // TODO: This line of code loads data into the 'tRACNGHIEM.CAUHOI' table. You can move, or remove it, as needed.
-            this.giangvienTableAdapter.Connection.ConnectionString = Program.connstr;
+            this.cAUHOITableAdapter.Connection.ConnectionString = Program.connstr;
             this.cAUHOITableAdapter.Fill(this.tRACNGHIEM.CAUHOI);
             // TODO: This line of code loads data into the 'dSMK.V_LAYMAKHOA' table. You can move, or remove it, as needed.
+            this.v_LAYMAKHOATableAdapter.Connection.ConnectionString = Program.connstr;
             this.v_LAYMAKHOATableAdapter.Fill(this.dSMK.V_LAYMAKHOA);
             // TODO: This line of code loads data into the 'tRACNGHIEMDataSet.V_DSPM' table. You can move, or remove it, as needed.
+            this.v_DSPMTableAdapter.Connection.ConnectionString = Program.connstr;
             this.v_DSPMTableAdapter.Fill(this.tRACNGHIEMDataSet.V_DSPM);
             // TODO: This line of code loads data into the 'tRACNGHIEM.GIANGVIEN' table. You can move, or remove it, as needed.
             this.giangvienTableAdapter.Connection.ConnectionString = Program.connstr;
             this.giangvienTableAdapter.Fill(this.tRACNGHIEM.GIANGVIEN);
-            /*if (Program.mGroup == "PGV")
+            if (Program.mGroup == "PGV      ")
             {
                 btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = btnLoad.Enabled = btnLuu.Enabled = false;
                 btnThoat.Enabled = true;
             }
 
-            if (Program.mGroup == "GIANGVIEN")
-            {
-                btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = btnLoad.Enabled = btnLuu.Enabled = false;
-                btnThoat.Enabled = true;
-            }*/
         }
 
         private void btnThoat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -116,23 +119,36 @@ namespace THITRACNGHIEM
                 else
                 {
                     this.bdsGV.EndEdit();
-                    MessageBox.Show("Thành công!");
                     bdsGV.ResetCurrentItem();
                     this.giangvienTableAdapter.Update(this.tRACNGHIEM.GIANGVIEN);
                     btnOk.Visible = btnHuy.Visible = false;
                     gbGV.Enabled = false;
-                    btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = btnLoad.Enabled = btnLuu.Enabled = btnThoat.Enabled = true;
+                    btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = btnLoad.Enabled = btnLuu.Enabled 
+                        = btnThoat.Enabled = giangvienGridControl.Enabled = true;
+                    MessageBox.Show("Thành công!");
                 }
             }
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            bdsGV.RemoveCurrent();
-            bdsGV.EndEdit();
-            gbGV.Enabled = false;
-            btnOk.Visible = btnHuy.Visible = false;
-            btnThoat.Enabled = btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = btnLoad.Enabled = btnLuu.Enabled = giangvienGridControl.Enabled = true;
+            if(checkButton)
+            {
+                bdsGV.CancelEdit();
+                gbGV.Enabled = false;
+                btnOk.Visible = btnHuy.Visible = false;
+                btnThoat.Enabled = btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled 
+                = btnLoad.Enabled = btnLuu.Enabled = giangvienGridControl.Enabled = true;
+            }
+            else
+            {
+                bdsGV.CancelEdit();
+                gbGV.Enabled = false;
+                btnHuy.Visible = false;
+                btnThoat.Enabled = btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled
+                    = btnLoad.Enabled = btnLuu.Enabled = giangvienGridControl.Enabled = true;
+            }    
+            
         }
 
         private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -166,9 +182,10 @@ namespace THITRACNGHIEM
         private void btnSua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             gbGV.Enabled = btnLuu.Enabled = true;
-            btnHuySua.Visible = true;
-            btnThoat.Enabled = btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled
-                = btnLoad.Enabled = giangvienGridControl.Enabled = false;
+            btnHuy.Visible = true;
+            btnThoat.Enabled = btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled= btnLoad.Enabled 
+            = giangvienGridControl.Enabled = txtMAGV.Enabled = txtMAKH.Enabled = false;
+            checkButton = false;
         }
 
         private void btnLuu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -178,7 +195,7 @@ namespace THITRACNGHIEM
                 bdsGV.EndEdit();
                 bdsGV.ResetCurrentItem();
                 gbGV.Enabled = false;
-                btnHuySua.Visible = false;
+                btnHuy.Visible = false;
                 btnThoat.Enabled = btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled
                     = btnLoad.Enabled = btnLuu.Enabled = giangvienGridControl.Enabled = true;
                 this.giangvienTableAdapter.Update(this.tRACNGHIEM.GIANGVIEN);
@@ -191,15 +208,6 @@ namespace THITRACNGHIEM
             }
         }
 
-        private void btnHuySua_Click(object sender, EventArgs e)
-        {
-            bdsGV.EndEdit();
-            gbGV.Enabled = false;
-            btnHuySua.Visible = false;
-            btnThoat.Enabled = btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled 
-                = btnLoad.Enabled = btnLuu.Enabled = giangvienGridControl.Enabled = true;
-        }
-
         private void btnLoad_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             try
@@ -207,7 +215,7 @@ namespace THITRACNGHIEM
                 this.giangvienTableAdapter.Fill(this.tRACNGHIEM.GIANGVIEN);
                 bdsGV.CancelEdit();
                 gbGV.Enabled = false;
-                btnHuySua.Visible = btnOk.Visible = btnHuy.Visible = false;
+                btnOk.Visible = btnHuy.Visible = false;
                 btnThoat.Enabled = btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled
                     = btnLoad.Enabled = btnLuu.Enabled = giangvienGridControl.Enabled = true;
             }

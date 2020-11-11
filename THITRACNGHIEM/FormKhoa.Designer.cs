@@ -40,32 +40,32 @@
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnThem = new DevExpress.XtraBars.BarButtonItem();
             this.btnXoa = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnSua = new DevExpress.XtraBars.BarButtonItem();
+            this.btnLuu = new DevExpress.XtraBars.BarButtonItem();
+            this.btnLoad = new DevExpress.XtraBars.BarButtonItem();
+            this.btnThoat = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.tRACNGHIEM = new THITRACNGHIEM.TRACNGHIEM();
             this.tableAdapterManager = new THITRACNGHIEM.TRACNGHIEMTableAdapters.TableAdapterManager();
-            this.kHOATableAdapter = new THITRACNGHIEM.TRACNGHIEMTableAdapters.KHOATableAdapter();
-            this.lOPTableAdapter = new THITRACNGHIEM.TRACNGHIEMTableAdapters.LOPTableAdapter();
+            this.khoaTableAdapter = new THITRACNGHIEM.TRACNGHIEMTableAdapters.KHOATableAdapter();
+            this.lopTableAdapter = new THITRACNGHIEM.TRACNGHIEMTableAdapters.LOPTableAdapter();
             this.gbCS = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbCS = new System.Windows.Forms.ComboBox();
             this.bdsDSCS = new System.Windows.Forms.BindingSource(this.components);
             this.tRACNGHIEMDataSet = new THITRACNGHIEM.TRACNGHIEMDataSet();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lOPGridControl = new DevExpress.XtraGrid.GridControl();
+            this.lopGridControl = new DevExpress.XtraGrid.GridControl();
             this.bdsLOP = new System.Windows.Forms.BindingSource(this.components);
             this.bdsKHOA = new System.Windows.Forms.BindingSource(this.components);
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMALOP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTENLOP = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMAKH1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.kHOAGridControl = new DevExpress.XtraGrid.GridControl();
+            this.khoaGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMAKH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTENKH = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -73,19 +73,19 @@
             this.gbKHOA = new System.Windows.Forms.GroupBox();
             this.btnHuyKHOA = new System.Windows.Forms.Button();
             this.btnOkKHOA = new System.Windows.Forms.Button();
-            this.mACSTextBox = new System.Windows.Forms.TextBox();
-            this.tENKHTextBox = new System.Windows.Forms.TextBox();
-            this.mAKHTextBox = new System.Windows.Forms.TextBox();
+            this.txtMACS = new System.Windows.Forms.TextBox();
+            this.txtTENKH = new System.Windows.Forms.TextBox();
+            this.txtMAKH = new System.Windows.Forms.TextBox();
             this.gbLOP = new System.Windows.Forms.GroupBox();
             this.btnHuyLOP = new System.Windows.Forms.Button();
             this.btnOkLOP = new System.Windows.Forms.Button();
-            this.mAKHTextBox1 = new System.Windows.Forms.TextBox();
-            this.tENLOPTextBox = new System.Windows.Forms.TextBox();
-            this.mALOPTextBox = new System.Windows.Forms.TextBox();
+            this.txtMAKH1 = new System.Windows.Forms.TextBox();
+            this.txtTENLOP = new System.Windows.Forms.TextBox();
+            this.txtMALOP = new System.Windows.Forms.TextBox();
             this.v_DSPMTableAdapter = new THITRACNGHIEM.TRACNGHIEMDataSetTableAdapters.V_DSPMTableAdapter();
             this.tableAdapterManager1 = new THITRACNGHIEM.TRACNGHIEMDataSetTableAdapters.TableAdapterManager();
-            this.btnHuySuaKhoa = new System.Windows.Forms.Button();
-            this.btnHuySuaLop = new System.Windows.Forms.Button();
+            this.bdsGV = new System.Windows.Forms.BindingSource(this.components);
+            this.gIANGVIENTableAdapter = new THITRACNGHIEM.TRACNGHIEMTableAdapters.GIANGVIENTableAdapter();
             mAKHLabel = new System.Windows.Forms.Label();
             tENKHLabel = new System.Windows.Forms.Label();
             mACSLabel = new System.Windows.Forms.Label();
@@ -98,14 +98,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.bdsDSCS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tRACNGHIEMDataSet)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lOPGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lopGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsLOP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsKHOA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kHOAGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.khoaGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.gbKHOA.SuspendLayout();
             this.gbLOP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsGV)).BeginInit();
             this.SuspendLayout();
             // 
             // mAKHLabel
@@ -174,10 +175,10 @@
             this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.btnThem,
             this.btnXoa,
-            this.barButtonItem3,
-            this.barButtonItem4,
-            this.barButtonItem5,
-            this.barButtonItem1});
+            this.btnSua,
+            this.btnLuu,
+            this.btnThoat,
+            this.btnLoad});
             this.barManager1.MaxItemId = 6;
             // 
             // bar1
@@ -189,10 +190,10 @@
             this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnThem, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnXoa, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem3, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem4, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem5, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnSua, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnLuu, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnLoad, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnThoat, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar1.Text = "Tools";
             // 
             // btnThem
@@ -201,6 +202,7 @@
             this.btnThem.Id = 0;
             this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
             this.btnThem.Name = "btnThem";
+            this.btnThem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThem_ItemClick);
             // 
             // btnXoa
             // 
@@ -208,34 +210,39 @@
             this.btnXoa.Id = 1;
             this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
             this.btnXoa.Name = "btnXoa";
+            this.btnXoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXoa_ItemClick);
             // 
-            // barButtonItem3
+            // btnSua
             // 
-            this.barButtonItem3.Caption = "Edit";
-            this.barButtonItem3.Id = 2;
-            this.barButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
-            this.barButtonItem3.Name = "barButtonItem3";
+            this.btnSua.Caption = "Edit";
+            this.btnSua.Id = 2;
+            this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
+            this.btnSua.Name = "btnSua";
+            this.btnSua.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnSua_ItemClick);
             // 
-            // barButtonItem4
+            // btnLuu
             // 
-            this.barButtonItem4.Caption = "Save";
-            this.barButtonItem4.Id = 3;
-            this.barButtonItem4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.Image")));
-            this.barButtonItem4.Name = "barButtonItem4";
+            this.btnLuu.Caption = "Save";
+            this.btnLuu.Id = 3;
+            this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLuu_ItemClick);
             // 
-            // barButtonItem5
+            // btnLoad
             // 
-            this.barButtonItem5.Caption = "Exit";
-            this.barButtonItem5.Id = 4;
-            this.barButtonItem5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.Image")));
-            this.barButtonItem5.Name = "barButtonItem5";
+            this.btnLoad.Caption = "Refresh";
+            this.btnLoad.Id = 5;
+            this.btnLoad.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLoad.ImageOptions.Image")));
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLoad_ItemClick);
             // 
-            // barButtonItem1
+            // btnThoat
             // 
-            this.barButtonItem1.Caption = "Refresh";
-            this.barButtonItem1.Id = 5;
-            this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.barButtonItem1.Name = "barButtonItem1";
+            this.btnThoat.Caption = "Exit";
+            this.btnThoat.Id = 4;
+            this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThoat_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -243,7 +250,7 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(749, 40);
+            this.barDockControlTop.Size = new System.Drawing.Size(780, 40);
             // 
             // barDockControlBottom
             // 
@@ -251,7 +258,7 @@
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 546);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(749, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(780, 0);
             // 
             // barDockControlLeft
             // 
@@ -265,7 +272,7 @@
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(749, 40);
+            this.barDockControlRight.Location = new System.Drawing.Point(780, 40);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 506);
             // 
@@ -283,9 +290,9 @@
             this.tableAdapterManager.DANGKYTableAdapter = null;
             this.tableAdapterManager.GIANGVIENTableAdapter = null;
             this.tableAdapterManager.GV_DAYTableAdapter = null;
-            this.tableAdapterManager.KHOATableAdapter = this.kHOATableAdapter;
+            this.tableAdapterManager.KHOATableAdapter = this.khoaTableAdapter;
             this.tableAdapterManager.LAYBAITHITableAdapter = null;
-            this.tableAdapterManager.LOPTableAdapter = this.lOPTableAdapter;
+            this.tableAdapterManager.LOPTableAdapter = this.lopTableAdapter;
             this.tableAdapterManager.LUACHONTableAdapter = null;
             this.tableAdapterManager.MONHOCTableAdapter = null;
             this.tableAdapterManager.NHANVIENPGVTableAdapter = null;
@@ -294,13 +301,13 @@
             this.tableAdapterManager.TRINHDOTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = THITRACNGHIEM.TRACNGHIEMTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // kHOATableAdapter
+            // khoaTableAdapter
             // 
-            this.kHOATableAdapter.ClearBeforeFill = true;
+            this.khoaTableAdapter.ClearBeforeFill = true;
             // 
-            // lOPTableAdapter
+            // lopTableAdapter
             // 
-            this.lOPTableAdapter.ClearBeforeFill = true;
+            this.lopTableAdapter.ClearBeforeFill = true;
             // 
             // gbCS
             // 
@@ -309,7 +316,7 @@
             this.gbCS.Dock = System.Windows.Forms.DockStyle.Top;
             this.gbCS.Location = new System.Drawing.Point(0, 40);
             this.gbCS.Name = "gbCS";
-            this.gbCS.Size = new System.Drawing.Size(749, 69);
+            this.gbCS.Size = new System.Drawing.Size(780, 67);
             this.gbCS.TabIndex = 6;
             this.gbCS.TabStop = false;
             // 
@@ -351,31 +358,32 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.lOPGridControl, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.kHOAGridControl, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lopGridControl, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.khoaGridControl, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.gbKHOA, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.gbLOP, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 109);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 107);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(749, 437);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(780, 439);
             this.tableLayoutPanel1.TabIndex = 7;
             // 
-            // lOPGridControl
+            // lopGridControl
             // 
-            this.lOPGridControl.DataSource = this.bdsLOP;
-            this.lOPGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lOPGridControl.Location = new System.Drawing.Point(377, 3);
-            this.lOPGridControl.MainView = this.gridView2;
-            this.lOPGridControl.MenuManager = this.barManager1;
-            this.lOPGridControl.Name = "lOPGridControl";
-            this.lOPGridControl.Size = new System.Drawing.Size(369, 212);
-            this.lOPGridControl.TabIndex = 1;
-            this.lOPGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.lopGridControl.DataSource = this.bdsLOP;
+            this.lopGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lopGridControl.Location = new System.Drawing.Point(393, 3);
+            this.lopGridControl.MainView = this.gridView2;
+            this.lopGridControl.MenuManager = this.barManager1;
+            this.lopGridControl.Name = "lopGridControl";
+            this.lopGridControl.Size = new System.Drawing.Size(384, 213);
+            this.lopGridControl.TabIndex = 1;
+            this.lopGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
+            this.lopGridControl.Click += new System.EventHandler(this.lOPGridControl_Click);
             // 
             // bdsLOP
             // 
@@ -393,13 +401,15 @@
             this.colMALOP,
             this.colTENLOP,
             this.colMAKH1});
-            this.gridView2.GridControl = this.lOPGridControl;
+            this.gridView2.GridControl = this.lopGridControl;
             this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsBehavior.Editable = false;
             // 
             // colMALOP
             // 
             this.colMALOP.FieldName = "MALOP";
             this.colMALOP.Name = "colMALOP";
+            this.colMALOP.OptionsColumn.AllowEdit = false;
             this.colMALOP.Visible = true;
             this.colMALOP.VisibleIndex = 0;
             // 
@@ -407,6 +417,7 @@
             // 
             this.colTENLOP.FieldName = "TENLOP";
             this.colTENLOP.Name = "colTENLOP";
+            this.colTENLOP.OptionsColumn.AllowEdit = false;
             this.colTENLOP.Visible = true;
             this.colTENLOP.VisibleIndex = 1;
             // 
@@ -414,21 +425,23 @@
             // 
             this.colMAKH1.FieldName = "MAKH";
             this.colMAKH1.Name = "colMAKH1";
+            this.colMAKH1.OptionsColumn.AllowEdit = false;
             this.colMAKH1.Visible = true;
             this.colMAKH1.VisibleIndex = 2;
             // 
-            // kHOAGridControl
+            // khoaGridControl
             // 
-            this.kHOAGridControl.DataSource = this.bdsKHOA;
-            this.kHOAGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kHOAGridControl.Location = new System.Drawing.Point(3, 3);
-            this.kHOAGridControl.MainView = this.gridView1;
-            this.kHOAGridControl.MenuManager = this.barManager1;
-            this.kHOAGridControl.Name = "kHOAGridControl";
-            this.kHOAGridControl.Size = new System.Drawing.Size(368, 212);
-            this.kHOAGridControl.TabIndex = 0;
-            this.kHOAGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.khoaGridControl.DataSource = this.bdsKHOA;
+            this.khoaGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.khoaGridControl.Location = new System.Drawing.Point(3, 3);
+            this.khoaGridControl.MainView = this.gridView1;
+            this.khoaGridControl.MenuManager = this.barManager1;
+            this.khoaGridControl.Name = "khoaGridControl";
+            this.khoaGridControl.Size = new System.Drawing.Size(384, 213);
+            this.khoaGridControl.TabIndex = 0;
+            this.khoaGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.khoaGridControl.Click += new System.EventHandler(this.kHOAGridControl_Click);
             // 
             // gridView1
             // 
@@ -436,13 +449,15 @@
             this.colMAKH,
             this.colTENKH,
             this.colMACS});
-            this.gridView1.GridControl = this.kHOAGridControl;
+            this.gridView1.GridControl = this.khoaGridControl;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             // 
             // colMAKH
             // 
             this.colMAKH.FieldName = "MAKH";
             this.colMAKH.Name = "colMAKH";
+            this.colMAKH.OptionsColumn.AllowEdit = false;
             this.colMAKH.Visible = true;
             this.colMAKH.VisibleIndex = 0;
             // 
@@ -450,6 +465,7 @@
             // 
             this.colTENKH.FieldName = "TENKH";
             this.colTENKH.Name = "colTENKH";
+            this.colTENKH.OptionsColumn.AllowEdit = false;
             this.colTENKH.Visible = true;
             this.colTENKH.VisibleIndex = 1;
             // 
@@ -457,24 +473,25 @@
             // 
             this.colMACS.FieldName = "MACS";
             this.colMACS.Name = "colMACS";
+            this.colMACS.OptionsColumn.AllowEdit = false;
             this.colMACS.Visible = true;
             this.colMACS.VisibleIndex = 2;
             // 
             // gbKHOA
             // 
-            this.gbKHOA.Controls.Add(this.btnHuySuaKhoa);
             this.gbKHOA.Controls.Add(this.btnHuyKHOA);
             this.gbKHOA.Controls.Add(this.btnOkKHOA);
             this.gbKHOA.Controls.Add(mACSLabel);
-            this.gbKHOA.Controls.Add(this.mACSTextBox);
+            this.gbKHOA.Controls.Add(this.txtMACS);
             this.gbKHOA.Controls.Add(tENKHLabel);
-            this.gbKHOA.Controls.Add(this.tENKHTextBox);
+            this.gbKHOA.Controls.Add(this.txtTENKH);
             this.gbKHOA.Controls.Add(mAKHLabel);
-            this.gbKHOA.Controls.Add(this.mAKHTextBox);
+            this.gbKHOA.Controls.Add(this.txtMAKH);
             this.gbKHOA.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbKHOA.Location = new System.Drawing.Point(3, 221);
+            this.gbKHOA.Enabled = false;
+            this.gbKHOA.Location = new System.Drawing.Point(3, 222);
             this.gbKHOA.Name = "gbKHOA";
-            this.gbKHOA.Size = new System.Drawing.Size(368, 213);
+            this.gbKHOA.Size = new System.Drawing.Size(384, 214);
             this.gbKHOA.TabIndex = 2;
             this.gbKHOA.TabStop = false;
             // 
@@ -487,6 +504,7 @@
             this.btnHuyKHOA.Text = "Cancel";
             this.btnHuyKHOA.UseVisualStyleBackColor = true;
             this.btnHuyKHOA.Visible = false;
+            this.btnHuyKHOA.Click += new System.EventHandler(this.btnHuyKHOA_Click);
             // 
             // btnOkKHOA
             // 
@@ -497,46 +515,47 @@
             this.btnOkKHOA.Text = "Ok";
             this.btnOkKHOA.UseVisualStyleBackColor = true;
             this.btnOkKHOA.Visible = false;
+            this.btnOkKHOA.Click += new System.EventHandler(this.btnOkKHOA_Click);
             // 
-            // mACSTextBox
+            // txtMACS
             // 
-            this.mACSTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKHOA, "MACS", true));
-            this.mACSTextBox.Location = new System.Drawing.Point(65, 113);
-            this.mACSTextBox.Name = "mACSTextBox";
-            this.mACSTextBox.Size = new System.Drawing.Size(174, 21);
-            this.mACSTextBox.TabIndex = 5;
+            this.txtMACS.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKHOA, "MACS", true));
+            this.txtMACS.Location = new System.Drawing.Point(65, 113);
+            this.txtMACS.Name = "txtMACS";
+            this.txtMACS.Size = new System.Drawing.Size(174, 21);
+            this.txtMACS.TabIndex = 5;
             // 
-            // tENKHTextBox
+            // txtTENKH
             // 
-            this.tENKHTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKHOA, "TENKH", true));
-            this.tENKHTextBox.Location = new System.Drawing.Point(65, 68);
-            this.tENKHTextBox.Name = "tENKHTextBox";
-            this.tENKHTextBox.Size = new System.Drawing.Size(174, 21);
-            this.tENKHTextBox.TabIndex = 3;
+            this.txtTENKH.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKHOA, "TENKH", true));
+            this.txtTENKH.Location = new System.Drawing.Point(65, 68);
+            this.txtTENKH.Name = "txtTENKH";
+            this.txtTENKH.Size = new System.Drawing.Size(174, 21);
+            this.txtTENKH.TabIndex = 3;
             // 
-            // mAKHTextBox
+            // txtMAKH
             // 
-            this.mAKHTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKHOA, "MAKH", true));
-            this.mAKHTextBox.Location = new System.Drawing.Point(65, 29);
-            this.mAKHTextBox.Name = "mAKHTextBox";
-            this.mAKHTextBox.Size = new System.Drawing.Size(174, 21);
-            this.mAKHTextBox.TabIndex = 1;
+            this.txtMAKH.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsKHOA, "MAKH", true));
+            this.txtMAKH.Location = new System.Drawing.Point(65, 29);
+            this.txtMAKH.Name = "txtMAKH";
+            this.txtMAKH.Size = new System.Drawing.Size(174, 21);
+            this.txtMAKH.TabIndex = 1;
             // 
             // gbLOP
             // 
-            this.gbLOP.Controls.Add(this.btnHuySuaLop);
             this.gbLOP.Controls.Add(this.btnHuyLOP);
             this.gbLOP.Controls.Add(this.btnOkLOP);
             this.gbLOP.Controls.Add(mAKHLabel1);
-            this.gbLOP.Controls.Add(this.mAKHTextBox1);
+            this.gbLOP.Controls.Add(this.txtMAKH1);
             this.gbLOP.Controls.Add(tENLOPLabel);
-            this.gbLOP.Controls.Add(this.tENLOPTextBox);
+            this.gbLOP.Controls.Add(this.txtTENLOP);
             this.gbLOP.Controls.Add(mALOPLabel);
-            this.gbLOP.Controls.Add(this.mALOPTextBox);
+            this.gbLOP.Controls.Add(this.txtMALOP);
             this.gbLOP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbLOP.Location = new System.Drawing.Point(377, 221);
+            this.gbLOP.Enabled = false;
+            this.gbLOP.Location = new System.Drawing.Point(393, 222);
             this.gbLOP.Name = "gbLOP";
-            this.gbLOP.Size = new System.Drawing.Size(369, 213);
+            this.gbLOP.Size = new System.Drawing.Size(384, 214);
             this.gbLOP.TabIndex = 3;
             this.gbLOP.TabStop = false;
             // 
@@ -549,6 +568,7 @@
             this.btnHuyLOP.Text = "Cancel";
             this.btnHuyLOP.UseVisualStyleBackColor = true;
             this.btnHuyLOP.Visible = false;
+            this.btnHuyLOP.Click += new System.EventHandler(this.btnHuyLOP_Click);
             // 
             // btnOkLOP
             // 
@@ -559,30 +579,31 @@
             this.btnOkLOP.Text = "Ok";
             this.btnOkLOP.UseVisualStyleBackColor = true;
             this.btnOkLOP.Visible = false;
+            this.btnOkLOP.Click += new System.EventHandler(this.btnOkLOP_Click);
             // 
-            // mAKHTextBox1
+            // txtMAKH1
             // 
-            this.mAKHTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLOP, "MAKH", true));
-            this.mAKHTextBox1.Location = new System.Drawing.Point(68, 113);
-            this.mAKHTextBox1.Name = "mAKHTextBox1";
-            this.mAKHTextBox1.Size = new System.Drawing.Size(175, 21);
-            this.mAKHTextBox1.TabIndex = 5;
+            this.txtMAKH1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLOP, "MAKH", true));
+            this.txtMAKH1.Location = new System.Drawing.Point(68, 113);
+            this.txtMAKH1.Name = "txtMAKH1";
+            this.txtMAKH1.Size = new System.Drawing.Size(175, 21);
+            this.txtMAKH1.TabIndex = 5;
             // 
-            // tENLOPTextBox
+            // txtTENLOP
             // 
-            this.tENLOPTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLOP, "TENLOP", true));
-            this.tENLOPTextBox.Location = new System.Drawing.Point(68, 68);
-            this.tENLOPTextBox.Name = "tENLOPTextBox";
-            this.tENLOPTextBox.Size = new System.Drawing.Size(175, 21);
-            this.tENLOPTextBox.TabIndex = 3;
+            this.txtTENLOP.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLOP, "TENLOP", true));
+            this.txtTENLOP.Location = new System.Drawing.Point(68, 68);
+            this.txtTENLOP.Name = "txtTENLOP";
+            this.txtTENLOP.Size = new System.Drawing.Size(175, 21);
+            this.txtTENLOP.TabIndex = 3;
             // 
-            // mALOPTextBox
+            // txtMALOP
             // 
-            this.mALOPTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLOP, "MALOP", true));
-            this.mALOPTextBox.Location = new System.Drawing.Point(68, 29);
-            this.mALOPTextBox.Name = "mALOPTextBox";
-            this.mALOPTextBox.Size = new System.Drawing.Size(175, 21);
-            this.mALOPTextBox.TabIndex = 1;
+            this.txtMALOP.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsLOP, "MALOP", true));
+            this.txtMALOP.Location = new System.Drawing.Point(68, 29);
+            this.txtMALOP.Name = "txtMALOP";
+            this.txtMALOP.Size = new System.Drawing.Size(175, 21);
+            this.txtMALOP.TabIndex = 1;
             // 
             // v_DSPMTableAdapter
             // 
@@ -594,31 +615,20 @@
             this.tableAdapterManager1.Connection = null;
             this.tableAdapterManager1.UpdateOrder = THITRACNGHIEM.TRACNGHIEMDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // btnHuySuaKhoa
+            // bdsGV
             // 
-            this.btnHuySuaKhoa.Location = new System.Drawing.Point(112, 157);
-            this.btnHuySuaKhoa.Name = "btnHuySuaKhoa";
-            this.btnHuySuaKhoa.Size = new System.Drawing.Size(75, 23);
-            this.btnHuySuaKhoa.TabIndex = 8;
-            this.btnHuySuaKhoa.Text = "Cancel";
-            this.btnHuySuaKhoa.UseVisualStyleBackColor = true;
-            this.btnHuySuaKhoa.Visible = false;
+            this.bdsGV.DataMember = "FK_GIANGVIEN_KHOA";
+            this.bdsGV.DataSource = this.bdsKHOA;
             // 
-            // btnHuySuaLop
+            // gIANGVIENTableAdapter
             // 
-            this.btnHuySuaLop.Location = new System.Drawing.Point(116, 157);
-            this.btnHuySuaLop.Name = "btnHuySuaLop";
-            this.btnHuySuaLop.Size = new System.Drawing.Size(75, 23);
-            this.btnHuySuaLop.TabIndex = 8;
-            this.btnHuySuaLop.Text = "Cancel";
-            this.btnHuySuaLop.UseVisualStyleBackColor = true;
-            this.btnHuySuaLop.Visible = false;
+            this.gIANGVIENTableAdapter.ClearBeforeFill = true;
             // 
             // FormKhoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(749, 546);
+            this.ClientSize = new System.Drawing.Size(780, 546);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.gbCS);
             this.Controls.Add(this.barDockControlLeft);
@@ -636,16 +646,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.bdsDSCS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tRACNGHIEMDataSet)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.lOPGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lopGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsLOP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsKHOA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kHOAGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.khoaGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.gbKHOA.ResumeLayout(false);
             this.gbKHOA.PerformLayout();
             this.gbLOP.ResumeLayout(false);
             this.gbLOP.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -661,24 +672,24 @@
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.BarButtonItem btnThem;
         private DevExpress.XtraBars.BarButtonItem btnXoa;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem btnSua;
+        private DevExpress.XtraBars.BarButtonItem btnLuu;
+        private DevExpress.XtraBars.BarButtonItem btnThoat;
+        private DevExpress.XtraBars.BarButtonItem btnLoad;
         private TRACNGHIEM tRACNGHIEM;
         private TRACNGHIEMTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingSource bdsKHOA;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.GroupBox gbCS;
-        private TRACNGHIEMTableAdapters.KHOATableAdapter kHOATableAdapter;
-        private DevExpress.XtraGrid.GridControl kHOAGridControl;
+        private TRACNGHIEMTableAdapters.KHOATableAdapter khoaTableAdapter;
+        private DevExpress.XtraGrid.GridControl khoaGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colMAKH;
         private DevExpress.XtraGrid.Columns.GridColumn colTENKH;
         private DevExpress.XtraGrid.Columns.GridColumn colMACS;
-        private TRACNGHIEMTableAdapters.LOPTableAdapter lOPTableAdapter;
+        private TRACNGHIEMTableAdapters.LOPTableAdapter lopTableAdapter;
         private System.Windows.Forms.BindingSource bdsLOP;
-        private DevExpress.XtraGrid.GridControl lOPGridControl;
+        private DevExpress.XtraGrid.GridControl lopGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraGrid.Columns.GridColumn colMALOP;
         private DevExpress.XtraGrid.Columns.GridColumn colTENLOP;
@@ -687,21 +698,21 @@
         private System.Windows.Forms.GroupBox gbLOP;
         private System.Windows.Forms.Button btnHuyKHOA;
         private System.Windows.Forms.Button btnOkKHOA;
-        private System.Windows.Forms.TextBox mACSTextBox;
-        private System.Windows.Forms.TextBox tENKHTextBox;
-        private System.Windows.Forms.TextBox mAKHTextBox;
+        private System.Windows.Forms.TextBox txtMACS;
+        private System.Windows.Forms.TextBox txtTENKH;
+        private System.Windows.Forms.TextBox txtMAKH;
         private System.Windows.Forms.Button btnHuyLOP;
         private System.Windows.Forms.Button btnOkLOP;
-        private System.Windows.Forms.TextBox mAKHTextBox1;
-        private System.Windows.Forms.TextBox tENLOPTextBox;
-        private System.Windows.Forms.TextBox mALOPTextBox;
+        private System.Windows.Forms.TextBox txtMAKH1;
+        private System.Windows.Forms.TextBox txtTENLOP;
+        private System.Windows.Forms.TextBox txtMALOP;
         private TRACNGHIEMDataSet tRACNGHIEMDataSet;
         private System.Windows.Forms.BindingSource bdsDSCS;
         private TRACNGHIEMDataSetTableAdapters.V_DSPMTableAdapter v_DSPMTableAdapter;
         private TRACNGHIEMDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
         private System.Windows.Forms.ComboBox cmbCS;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnHuySuaKhoa;
-        private System.Windows.Forms.Button btnHuySuaLop;
+        private System.Windows.Forms.BindingSource bdsGV;
+        private TRACNGHIEMTableAdapters.GIANGVIENTableAdapter gIANGVIENTableAdapter;
     }
 }

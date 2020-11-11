@@ -38,7 +38,10 @@ namespace THITRACNGHIEM
         public static FormGiangVien formgv;
         public static FormMonHoc formmh;
         public static FormKhoa formkh;
-        
+        public static FormLogin formLogin;
+        public static FormLopSinhVien formLopSV;
+        public static FormTaoLogin formTaoLogin;
+
 
         public static int ketNoi()
         {
@@ -116,7 +119,8 @@ namespace THITRACNGHIEM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormLogin());
+            formLogin = new FormLogin();
+            Application.Run(formLogin);
         }
     }
 }

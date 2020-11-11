@@ -124,7 +124,7 @@
             // btnDN
             // 
             this.btnDN.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDN.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDN.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDN.Location = new System.Drawing.Point(185, 211);
             this.btnDN.Name = "btnDN";
             this.btnDN.Size = new System.Drawing.Size(117, 33);

@@ -65,13 +65,12 @@ namespace THITRACNGHIEM
             }
             else
             {
-                IsMdiContainer = true;
                 Program.formgv = new FormGiangVien();
                 Program.formgv.MdiParent = Program.formmain;
                 Program.formgv.Activate();
                 Program.formgv.Show();
             }
-            
+
         }
 
         private void barBtnMH_ItemClick(object sender, ItemClickEventArgs e)
@@ -83,7 +82,6 @@ namespace THITRACNGHIEM
             }
             else
             {
-                IsMdiContainer = true;
                 Program.formmh = new FormMonHoc();
                 Program.formmh.MdiParent = Program.formmain;
                 Program.formmh.Activate();
@@ -100,11 +98,47 @@ namespace THITRACNGHIEM
             }
             else
             {
-                IsMdiContainer = true;
                 Program.formkh = new FormKhoa();
                 Program.formkh.MdiParent = Program.formmain;
                 Program.formkh.Activate();
                 Program.formkh.Show();
+            }
+        }
+
+        private void FormChinh_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Program.formLogin.Show();
+        }
+
+        private void barBtnSV_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form form = CheckExists(typeof(FormLopSinhVien));
+            if (form != null)
+            {
+                form.Activate();
+            }
+            else
+            {
+                Program.formLopSV = new FormLopSinhVien();
+                Program.formLopSV.MdiParent = Program.formmain;
+                Program.formLopSV.Activate();
+                Program.formLopSV.Show();
+            }
+        }
+
+        private void barBtnTaoTK_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form form = CheckExists(typeof(FormTaoLogin));
+            if (form != null)
+            {
+                form.Activate();
+            }
+            else
+            {
+                Program.formTaoLogin = new FormTaoLogin();
+                Program.formTaoLogin.MdiParent = Program.formmain;
+                Program.formTaoLogin.Activate();
+                Program.formTaoLogin.Show();
             }
         }
     }

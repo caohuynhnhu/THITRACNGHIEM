@@ -59,7 +59,6 @@
             this.colDIACHI = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMAKH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gbGV = new System.Windows.Forms.GroupBox();
-            this.btnHuySua = new System.Windows.Forms.Button();
             this.txtMAKH = new System.Windows.Forms.ComboBox();
             this.bdsMK = new System.Windows.Forms.BindingSource(this.components);
             this.dSMK = new THITRACNGHIEM.DSMK();
@@ -79,6 +78,8 @@
             this.cAUHOITableAdapter = new THITRACNGHIEM.TRACNGHIEMTableAdapters.CAUHOITableAdapter();
             this.bdsGVDAY = new System.Windows.Forms.BindingSource(this.components);
             this.gV_DAYTableAdapter = new THITRACNGHIEM.TRACNGHIEMTableAdapters.GV_DAYTableAdapter();
+            this.vLAYMAKHOABindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.v_LAYMAKHOATableAdapter1 = new THITRACNGHIEM.TRACNGHIEMTableAdapters.V_LAYMAKHOATableAdapter();
             mAGVLabel = new System.Windows.Forms.Label();
             hOLabel = new System.Windows.Forms.Label();
             tENLabel = new System.Windows.Forms.Label();
@@ -96,6 +97,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.v_DSPMBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsCH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsGVDAY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vLAYMAKHOABindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // mAGVLabel
@@ -236,7 +238,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 756);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 488);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Size = new System.Drawing.Size(795, 0);
             // 
@@ -246,7 +248,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 40);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 716);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 448);
             // 
             // barDockControlRight
             // 
@@ -254,7 +256,7 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(795, 40);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 716);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 448);
             // 
             // tRACNGHIEM
             // 
@@ -352,7 +354,6 @@
             // 
             // gbGV
             // 
-            this.gbGV.Controls.Add(this.btnHuySua);
             this.gbGV.Controls.Add(mAKHLabel1);
             this.gbGV.Controls.Add(this.txtMAKH);
             this.gbGV.Controls.Add(this.btnHuy);
@@ -373,22 +374,12 @@
             this.gbGV.TabIndex = 15;
             this.gbGV.TabStop = false;
             // 
-            // btnHuySua
-            // 
-            this.btnHuySua.Location = new System.Drawing.Point(366, 143);
-            this.btnHuySua.Name = "btnHuySua";
-            this.btnHuySua.Size = new System.Drawing.Size(75, 23);
-            this.btnHuySua.TabIndex = 13;
-            this.btnHuySua.Text = "Cancel";
-            this.btnHuySua.UseVisualStyleBackColor = true;
-            this.btnHuySua.Visible = false;
-            this.btnHuySua.Click += new System.EventHandler(this.btnHuySua_Click);
-            // 
             // txtMAKH
             // 
             this.txtMAKH.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsGV, "MAKH", true));
-            this.txtMAKH.DataSource = this.bdsMK;
+            this.txtMAKH.DataSource = this.vLAYMAKHOABindingSource;
             this.txtMAKH.DisplayMember = "MAKH";
+            this.txtMAKH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtMAKH.FormattingEnabled = true;
             this.txtMAKH.Location = new System.Drawing.Point(323, 97);
             this.txtMAKH.Name = "txtMAKH";
@@ -508,12 +499,21 @@
             // 
             this.gV_DAYTableAdapter.ClearBeforeFill = true;
             // 
+            // vLAYMAKHOABindingSource
+            // 
+            this.vLAYMAKHOABindingSource.DataMember = "V_LAYMAKHOA";
+            this.vLAYMAKHOABindingSource.DataSource = this.tRACNGHIEM;
+            // 
+            // v_LAYMAKHOATableAdapter1
+            // 
+            this.v_LAYMAKHOATableAdapter1.ClearBeforeFill = true;
+            // 
             // FormGiangVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(795, 756);
+            this.ClientSize = new System.Drawing.Size(795, 488);
             this.Controls.Add(this.gbGV);
             this.Controls.Add(this.giangvienGridControl);
             this.Controls.Add(this.barDockControlLeft);
@@ -537,6 +537,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.v_DSPMBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsCH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsGVDAY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vLAYMAKHOABindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -586,6 +587,7 @@
         private TRACNGHIEMTableAdapters.CAUHOITableAdapter cAUHOITableAdapter;
         private System.Windows.Forms.BindingSource bdsGVDAY;
         private TRACNGHIEMTableAdapters.GV_DAYTableAdapter gV_DAYTableAdapter;
-        private System.Windows.Forms.Button btnHuySua;
+        private System.Windows.Forms.BindingSource vLAYMAKHOABindingSource;
+        private TRACNGHIEMTableAdapters.V_LAYMAKHOATableAdapter v_LAYMAKHOATableAdapter1;
     }
 }
