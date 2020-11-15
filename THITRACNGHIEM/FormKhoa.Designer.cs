@@ -54,8 +54,6 @@
             this.lopTableAdapter = new THITRACNGHIEM.TRACNGHIEMTableAdapters.LOPTableAdapter();
             this.gbCS = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbCS = new System.Windows.Forms.ComboBox();
-            this.bdsDSCS = new System.Windows.Forms.BindingSource(this.components);
             this.tRACNGHIEMDataSet = new THITRACNGHIEM.TRACNGHIEMDataSet();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lopGridControl = new DevExpress.XtraGrid.GridControl();
@@ -86,6 +84,8 @@
             this.tableAdapterManager1 = new THITRACNGHIEM.TRACNGHIEMDataSetTableAdapters.TableAdapterManager();
             this.bdsGV = new System.Windows.Forms.BindingSource(this.components);
             this.gIANGVIENTableAdapter = new THITRACNGHIEM.TRACNGHIEMTableAdapters.GIANGVIENTableAdapter();
+            this.v_DSPMBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cmbCS = new System.Windows.Forms.ComboBox();
             mAKHLabel = new System.Windows.Forms.Label();
             tENKHLabel = new System.Windows.Forms.Label();
             mACSLabel = new System.Windows.Forms.Label();
@@ -95,7 +95,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tRACNGHIEM)).BeginInit();
             this.gbCS.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsDSCS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tRACNGHIEMDataSet)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lopGridControl)).BeginInit();
@@ -107,6 +106,7 @@
             this.gbKHOA.SuspendLayout();
             this.gbLOP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdsGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.v_DSPMBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // mAKHLabel
@@ -311,8 +311,8 @@
             // 
             // gbCS
             // 
-            this.gbCS.Controls.Add(this.label1);
             this.gbCS.Controls.Add(this.cmbCS);
+            this.gbCS.Controls.Add(this.label1);
             this.gbCS.Dock = System.Windows.Forms.DockStyle.Top;
             this.gbCS.Location = new System.Drawing.Point(0, 40);
             this.gbCS.Name = "gbCS";
@@ -329,24 +329,6 @@
             this.label1.Size = new System.Drawing.Size(49, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "Cơ Sở";
-            // 
-            // cmbCS
-            // 
-            this.cmbCS.DataSource = this.bdsDSCS;
-            this.cmbCS.DisplayMember = "description";
-            this.cmbCS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCS.FormattingEnabled = true;
-            this.cmbCS.Location = new System.Drawing.Point(157, 19);
-            this.cmbCS.Name = "cmbCS";
-            this.cmbCS.Size = new System.Drawing.Size(214, 21);
-            this.cmbCS.TabIndex = 0;
-            this.cmbCS.ValueMember = "subscriber_server";
-            this.cmbCS.SelectedIndexChanged += new System.EventHandler(this.cmbCS_SelectedIndexChanged);
-            // 
-            // bdsDSCS
-            // 
-            this.bdsDSCS.DataMember = "V_DSPM";
-            this.bdsDSCS.DataSource = this.tRACNGHIEMDataSet;
             // 
             // tRACNGHIEMDataSet
             // 
@@ -624,6 +606,24 @@
             // 
             this.gIANGVIENTableAdapter.ClearBeforeFill = true;
             // 
+            // v_DSPMBindingSource
+            // 
+            this.v_DSPMBindingSource.DataMember = "V_DSPM";
+            this.v_DSPMBindingSource.DataSource = this.tRACNGHIEMDataSet;
+            // 
+            // cmbCS
+            // 
+            this.cmbCS.DataSource = this.v_DSPMBindingSource;
+            this.cmbCS.DisplayMember = "description";
+            this.cmbCS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCS.FormattingEnabled = true;
+            this.cmbCS.Location = new System.Drawing.Point(155, 20);
+            this.cmbCS.Name = "cmbCS";
+            this.cmbCS.Size = new System.Drawing.Size(300, 21);
+            this.cmbCS.TabIndex = 1;
+            this.cmbCS.ValueMember = "subscriber_server";
+            this.cmbCS.SelectedIndexChanged += new System.EventHandler(this.cmbCS_SelectedIndexChanged_1);
+            // 
             // FormKhoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -643,7 +643,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tRACNGHIEM)).EndInit();
             this.gbCS.ResumeLayout(false);
             this.gbCS.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsDSCS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tRACNGHIEMDataSet)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lopGridControl)).EndInit();
@@ -657,6 +656,7 @@
             this.gbLOP.ResumeLayout(false);
             this.gbLOP.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdsGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.v_DSPMBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -707,12 +707,12 @@
         private System.Windows.Forms.TextBox txtTENLOP;
         private System.Windows.Forms.TextBox txtMALOP;
         private TRACNGHIEMDataSet tRACNGHIEMDataSet;
-        private System.Windows.Forms.BindingSource bdsDSCS;
         private TRACNGHIEMDataSetTableAdapters.V_DSPMTableAdapter v_DSPMTableAdapter;
         private TRACNGHIEMDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
-        private System.Windows.Forms.ComboBox cmbCS;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource bdsGV;
         private TRACNGHIEMTableAdapters.GIANGVIENTableAdapter gIANGVIENTableAdapter;
+        private System.Windows.Forms.ComboBox cmbCS;
+        private System.Windows.Forms.BindingSource v_DSPMBindingSource;
     }
 }

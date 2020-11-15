@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSV));
             this.ribbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnThi = new DevExpress.XtraBars.BarButtonItem();
@@ -41,8 +42,10 @@
             this.MaSV = new System.Windows.Forms.ToolStripStatusLabel();
             this.HoTen = new System.Windows.Forms.ToolStripStatusLabel();
             this.Nhom = new System.Windows.Forms.ToolStripStatusLabel();
+            this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -140,6 +143,10 @@
             this.Nhom.Size = new System.Drawing.Size(41, 17);
             this.Nhom.Text = "Nhóm";
             // 
+            // xtraTabbedMdiManager1
+            // 
+            this.xtraTabbedMdiManager1.MdiParent = this;
+            // 
             // FormSV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -147,14 +154,17 @@
             this.ClientSize = new System.Drawing.Size(679, 449);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.ribbon);
+            this.IsMdiContainer = true;
             this.Name = "FormSV";
             this.Ribbon = this.ribbon;
             this.Text = "Sinh Viên";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormSV_FormClosing);
             this.Load += new System.EventHandler(this.FormSV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,5 +184,6 @@
         private System.Windows.Forms.ToolStripStatusLabel MaSV;
         private System.Windows.Forms.ToolStripStatusLabel HoTen;
         private System.Windows.Forms.ToolStripStatusLabel Nhom;
+        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
     }
 }

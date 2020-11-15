@@ -31,6 +31,7 @@ namespace THITRACNGHIEM
         public static String passwordDN = "";
         public static String mGroup = "";
         public static String mHoten = "";
+        public static String mKhoa = "";
         public static int mCoso = 0;
         public static BindingSource bds_dspm = new BindingSource();
         public static FormChinh formmain;

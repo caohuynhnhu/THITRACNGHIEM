@@ -35,14 +35,19 @@ namespace THITRACNGHIEM
 
         private void btnDX_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Form form = this.CheckExists(typeof(FormSV));
+            Form form = this.CheckExists(typeof(FormLogin));
             if (form == null)
             {
-                FormSV f = new FormSV();
+                FormLogin f = new FormLogin();
                 f.Show();
             }
             else form.Activate();
             this.Close();
+        }
+
+        private void FormSV_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Program.formLogin.Show();
         }
     }
 }

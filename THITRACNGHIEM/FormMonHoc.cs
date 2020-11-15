@@ -45,7 +45,7 @@ namespace THITRACNGHIEM
             // TODO: This line of code loads data into the 'tRACNGHIEM.MONHOC' table. You can move, or remove it, as needed.
             this.monhocTableAdapter.Connection.ConnectionString = Program.connstr;
             this.monhocTableAdapter.Fill(this.tRACNGHIEM.MONHOC);
-            if (Program.mGroup == "PGV      ")
+            if (Program.mGroup == "PGV")
             {
                 btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = btnLoad.Enabled = btnLuu.Enabled = false;
                 btnThoat.Enabled = true;

@@ -37,10 +37,10 @@ namespace THITRACNGHIEM
                 pageHeThong.Visible = pageBaoCao.Visible = false;
                 rbDX.Visible = true;
             }
-            if (Program.mGroup == "KHOA     ")
+            if (Program.mGroup == "KHOA")
             {
                 pageBaoCao.Visible = false;
-                
+                rbDX.Visible = true;
             }
         }
 
@@ -140,6 +140,34 @@ namespace THITRACNGHIEM
                 Program.formTaoLogin.Activate();
                 Program.formTaoLogin.Show();
             }
+        }
+
+        private void btnBD_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form form = CheckExists(typeof(FormBoDe));
+            if (form != null)
+            {
+                form.Activate();
+            }
+            else
+            {
+                FormBoDe formbd = new FormBoDe();
+                formbd.MdiParent = Program.formmain;
+                formbd.Activate();
+                formbd.Show();
+            }
+        }
+
+        private void barBtnDX_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form form = this.CheckExists(typeof(FormLogin));
+            if (form == null)
+            {
+                FormLogin f = new FormLogin();
+                f.Show();
+            }
+            else form.Activate();
+            this.Close();
         }
     }
 }

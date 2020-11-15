@@ -34,7 +34,7 @@ namespace THITRACNGHIEM
             }
             else if (cmbMAGV.Text.Trim() == "")
             {
-                if (Program.mGroup == "PGV      ")
+                if (Program.mGroup == "PGV")
                 {
                     MessageBox.Show("Bạn chưa chọn nhân viên cần tạo tài khoản !!!", "Thông báo");
                 }
@@ -95,7 +95,7 @@ namespace THITRACNGHIEM
                     txtDN.Text = txtMK.Text = txtXNMK.Text = "";
                     cmbMAGV.SelectedIndex = cmbNQ.SelectedIndex = -1;
 
-                    if (Program.mGroup == "PGV      ")
+                    if (Program.mGroup == "PGV")
                     {
                         dsMAGV = new DataTable();
                         dsMAGV = Program.ExecSqlDataTable("SELECT * FROM V_DSNVCHUACOLOGIN");
@@ -122,7 +122,7 @@ namespace THITRACNGHIEM
         private void FormTaoLogin_Load(object sender, EventArgs e)
         {
             Program.ketNoi();
-            if (Program.mGroup == "PGV      ")
+            if (Program.mGroup == "PGV")
             {
                 lbTen.Text = "Mã nhân viên";
                 cmbNQ.Items.Add("PGV");

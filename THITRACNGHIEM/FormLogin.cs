@@ -103,9 +103,16 @@ namespace THITRACNGHIEM
                 myReader = Program.ExecSqlDataReader(strlenh);
                 if (myReader == null) return;
                 myReader.Read();
-                Program.username = myReader.GetString(0);
+                Program.username = myReader.GetString(0).Trim();
+                Program.mHoten = myReader.GetString(1).Trim();
+                Program.mGroup = myReader.GetString(2).Trim();
+                /*Program.username = myReader.GetString(0);
                 Program.mHoten = myReader.GetString(1);
-                Program.mGroup = myReader.GetString(2);
+                Program.mGroup = myReader.GetString(2);*/
+                if (Program.mGroup == "KHOA")
+                {
+                    Program.mKhoa = myReader.GetString(3);
+                }
                 myReader.Close();
                 Program.conn.Close();
                 this.SetVisibleCore(false);

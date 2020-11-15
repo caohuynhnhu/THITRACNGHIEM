@@ -58,7 +58,7 @@ namespace THITRACNGHIEM
             // TODO: This line of code loads data into the 'tRACNGHIEM.GIANGVIEN' table. You can move, or remove it, as needed.
             this.giangvienTableAdapter.Connection.ConnectionString = Program.connstr;
             this.giangvienTableAdapter.Fill(this.tRACNGHIEM.GIANGVIEN);
-            if (Program.mGroup == "PGV      ")
+            if (Program.mGroup == "PGV")
             {
                 btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = btnLoad.Enabled = btnLuu.Enabled = false;
                 btnThoat.Enabled = true;
@@ -120,12 +120,12 @@ namespace THITRACNGHIEM
                 {
                     this.bdsGV.EndEdit();
                     bdsGV.ResetCurrentItem();
+                    MessageBox.Show("Thành công!");
                     this.giangvienTableAdapter.Update(this.tRACNGHIEM.GIANGVIEN);
                     btnOk.Visible = btnHuy.Visible = false;
                     gbGV.Enabled = false;
                     btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = btnLoad.Enabled = btnLuu.Enabled 
                         = btnThoat.Enabled = giangvienGridControl.Enabled = true;
-                    MessageBox.Show("Thành công!");
                 }
             }
         }

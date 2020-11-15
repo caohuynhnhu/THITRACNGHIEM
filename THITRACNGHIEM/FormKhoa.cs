@@ -37,7 +37,7 @@ namespace THITRACNGHIEM
             this.gIANGVIENTableAdapter.Connection.ConnectionString = Program.connstr;
             this.gIANGVIENTableAdapter.Fill(this.tRACNGHIEM.GIANGVIEN);
             // TODO: This line of code loads data into the 'tRACNGHIEMDataSet.V_DSPM' table. You can move, or remove it, as needed.
-            this.v_DSPMTableAdapter.Connection.ConnectionString = Program.connstr;
+            //this.v_DSPMTableAdapter.Connection.ConnectionString = Program.connstr;
             this.v_DSPMTableAdapter.Fill(this.tRACNGHIEMDataSet.V_DSPM);
             // TODO: This line of code loads data into the 'tRACNGHIEM.LOP' table. You can move, or remove it, as needed.
             this.lopTableAdapter.Connection.ConnectionString = Program.connstr;
@@ -55,14 +55,16 @@ namespace THITRACNGHIEM
             {
                 cmbCS.SelectedItem = cmbCS.Items[1];
             }
-            if (Program.mGroup == "PGV      ")
+            if (Program.mGroup == "PGV")
             {
                 btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = btnLoad.Enabled = btnLuu.Enabled = false;
                 btnThoat.Enabled = true;
             }
-            if (Program.mGroup == "KHOA     ")
+            if (Program.mGroup == "KHOA")
             {
+                
                 cmbCS.Enabled = false;
+
             }
 
         }
@@ -77,38 +79,7 @@ namespace THITRACNGHIEM
 
         private void cmbCS_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cmbCS.SelectedValue != null)
-            {
-                if (cmbCS.ValueMember != "")
-                {
-                    if (Program.servername != cmbCS.SelectedValue.ToString())
-                    {
-                        Program.servername = cmbCS.SelectedValue.ToString();
-                    }
-                    if (cmbCS.SelectedIndex != Program.mCoso)
-                    {
-                        Program.login = Program.remoteLogin;
-                        Program.password = Program.remotePassword;
-                    }
-                    else
-                    {
-                        Program.login = Program.loginDN;
-                        Program.password = Program.passwordDN;
-                    }
-                    if (Program.ketNoi() == 0)
-                    {
-                        MessageBox.Show("Không thể kết nối", "Lỗi kết nối", MessageBoxButtons.OK);
-                        return;
-                    }
-                    else
-                    {
-                        this.khoaTableAdapter.Connection.ConnectionString = Program.connstr;
-                        this.khoaTableAdapter.Fill(this.tRACNGHIEM.KHOA);
-                        this.lopTableAdapter.Connection.ConnectionString = Program.connstr;
-                        this.lopTableAdapter.Fill(this.tRACNGHIEM.LOP);
-                    }
-                }
-            }
+            
         }
 
         private void btnHuyKHOA_Click(object sender, EventArgs e)
@@ -416,6 +387,42 @@ namespace THITRACNGHIEM
                     gbLOP.Enabled = false;
                     btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = btnLoad.Enabled
                         = btnLuu.Enabled = btnThoat.Enabled = lopGridControl.Enabled = true;
+                }
+            }
+        }
+
+        private void cmbCS_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (cmbCS.SelectedValue != null)
+            {
+                if (cmbCS.ValueMember != "")
+                {
+                    if (Program.servername != cmbCS.SelectedValue.ToString())
+                    {
+                        Program.servername = cmbCS.SelectedValue.ToString();
+                    }
+                    if (cmbCS.SelectedIndex != Program.mCoso)
+                    {
+                        Program.login = Program.remoteLogin;
+                        Program.password = Program.remotePassword;
+                    }
+                    else
+                    {
+                        Program.login = Program.loginDN;
+                        Program.password = Program.passwordDN;
+                    }
+                    if (Program.ketNoi() == 0)
+                    {
+                        MessageBox.Show("Không thể kết nối", "Lỗi kết nối", MessageBoxButtons.OK);
+                        return;
+                    }
+                    else
+                    {
+                        this.khoaTableAdapter.Connection.ConnectionString = Program.connstr;
+                        this.khoaTableAdapter.Fill(this.tRACNGHIEM.KHOA);
+                        this.lopTableAdapter.Connection.ConnectionString = Program.connstr;
+                        this.lopTableAdapter.Fill(this.tRACNGHIEM.LOP);
+                    }
                 }
             }
         }
