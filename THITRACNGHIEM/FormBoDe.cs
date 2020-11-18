@@ -41,6 +41,7 @@ namespace THITRACNGHIEM
             {
                 btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled = btnLoad.Enabled = btnLuu.Enabled = false;
                 btnThoat.Enabled = true;
+                pnMM.Visible = false;
             }
             if (Program.mGroup == "KHOA")
             {
@@ -134,8 +135,17 @@ namespace THITRACNGHIEM
                 bdsCH.CancelEdit();
                 gbCH.Enabled = false;
                 btnOk.Visible = btnHuy.Visible = false;
-                btnThoat.Enabled = btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled
+                if (Program.mGroup == "KHOA")
+                {
+                    btnThoat.Enabled = btnSua.Enabled
                     = btnLoad.Enabled = btnLuu.Enabled = cauhoiGridControl.Enabled = true;
+                }
+                if (Program.mGroup == "GIANGVIEN")
+                {
+                    btnThoat.Enabled = btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled
+                    = btnLoad.Enabled = btnLuu.Enabled = cauhoiGridControl.Enabled = true;
+                }
+                
             }
             catch (Exception ex)
             {
@@ -152,11 +162,19 @@ namespace THITRACNGHIEM
                 bdsCH.ResetCurrentItem();
                 gbCH.Enabled = false;
                 btnHuy.Visible = false;
-                btnThoat.Enabled = btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled
-                    = btnLoad.Enabled = btnLuu.Enabled = cauhoiGridControl.Enabled = cmbMH.Enabled = true;
                 this.cauhoiTableAdapter.Update(this.tRACNGHIEM.CAUHOI);
                 this.cauhoiTableAdapter.Fill(this.tRACNGHIEM.CAUHOI);
                 MessageBox.Show("Cập nhật bộ đề thành công!", "Notification", MessageBoxButtons.OK);
+                if (Program.mGroup == "KHOA")
+                {
+                    btnThoat.Enabled = btnSua.Enabled = cmbMH.Enabled
+                    = btnLoad.Enabled = btnLuu.Enabled = cauhoiGridControl.Enabled = true;
+                }
+                if (Program.mGroup == "GIANGVIEN")
+                {
+                    btnThoat.Enabled = btnThem.Enabled = btnXoa.Enabled = btnSua.Enabled
+                    = btnLoad.Enabled = btnLuu.Enabled = cauhoiGridControl.Enabled = cmbMH.Enabled = true;
+                }
             }
             catch (Exception ex)
             {
@@ -186,8 +204,8 @@ namespace THITRACNGHIEM
             {
                 gbCH.Enabled = btnLuu.Enabled = true;
                 btnHuy.Visible = true;
-                btnThoat.Enabled = btnThem.Enabled = btnXoa.Enabled = cmbMH.Enabled = btnSua.Enabled
-                = btnLoad.Enabled = cauhoiGridControl.Enabled = txtMAMH.Enabled = txtMAGV.Enabled = false;
+                btnThoat.Enabled = btnThem.Enabled = btnXoa.Enabled = cmbMH.Enabled = btnSua.Enabled = 
+                btnLoad.Enabled = cauhoiGridControl.Enabled = txtMAMH.Enabled = txtMAGV.Enabled = txtMACH.Enabled = false;
                 checkButton = false;
             }
         }
@@ -214,7 +232,8 @@ namespace THITRACNGHIEM
                 }
                 else if (Program.mGroup == "KHOA")
                 {
-                    btnThoat.Enabled =  btnSua.Enabled = btnLoad.Enabled = btnLuu.Enabled = cauhoiGridControl.Enabled = true;
+                    btnThoat.Enabled =  btnSua.Enabled = btnLoad.Enabled = btnLuu.Enabled 
+                        = cauhoiGridControl.Enabled = cmbMH.Enabled = true;
                     btnThem.Enabled = btnXoa.Enabled = false;
                 }
             }

@@ -49,7 +49,7 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnMM = new System.Windows.Forms.Panel();
             this.MAMH = new System.Windows.Forms.Label();
             this.cmbMH = new System.Windows.Forms.ComboBox();
             this.bdsMK = new System.Windows.Forms.BindingSource(this.components);
@@ -75,11 +75,11 @@
             this.btnOk = new System.Windows.Forms.Button();
             this.txtMAGV = new System.Windows.Forms.TextBox();
             this.txtTD = new System.Windows.Forms.ComboBox();
+            this.bdsTD = new System.Windows.Forms.BindingSource(this.components);
             this.txtDA = new System.Windows.Forms.TextBox();
             this.txtMAMH = new System.Windows.Forms.TextBox();
             this.txtLCH = new System.Windows.Forms.TextBox();
             this.txtMACH = new System.Windows.Forms.TextBox();
-            this.bdsTD = new System.Windows.Forms.BindingSource(this.components);
             this.trinhdoTableAdapter = new THITRACNGHIEM.TRACNGHIEMDataSetTableAdapters.SP_LAYTRINHDOTableAdapter();
             mACHLabel = new System.Windows.Forms.Label();
             lOAICAUHOILabel = new System.Windows.Forms.Label();
@@ -89,7 +89,7 @@
             mAGVLabel = new System.Windows.Forms.Label();
             nOIDUNGLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.pnMM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdsMK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tRACNGHIEMDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tRACNGHIEM)).BeginInit();
@@ -275,15 +275,15 @@
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 562);
             // 
-            // panel1
+            // pnMM
             // 
-            this.panel1.Controls.Add(this.MAMH);
-            this.panel1.Controls.Add(this.cmbMH);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 40);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(897, 50);
-            this.panel1.TabIndex = 4;
+            this.pnMM.Controls.Add(this.MAMH);
+            this.pnMM.Controls.Add(this.cmbMH);
+            this.pnMM.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnMM.Location = new System.Drawing.Point(0, 40);
+            this.pnMM.Name = "pnMM";
+            this.pnMM.Size = new System.Drawing.Size(897, 50);
+            this.pnMM.TabIndex = 4;
             // 
             // MAMH
             // 
@@ -291,9 +291,9 @@
             this.MAMH.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MAMH.Location = new System.Drawing.Point(111, 16);
             this.MAMH.Name = "MAMH";
-            this.MAMH.Size = new System.Drawing.Size(72, 19);
+            this.MAMH.Size = new System.Drawing.Size(68, 19);
             this.MAMH.TabIndex = 1;
-            this.MAMH.Text = "MAMON";
+            this.MAMH.Text = "Môn Học";
             // 
             // cmbMH
             // 
@@ -527,6 +527,11 @@
             this.txtTD.TabIndex = 11;
             this.txtTD.ValueMember = "MATRINHDO";
             // 
+            // bdsTD
+            // 
+            this.bdsTD.DataMember = "SP_LAYTRINHDO";
+            this.bdsTD.DataSource = this.tRACNGHIEMDataSet;
+            // 
             // txtDA
             // 
             this.txtDA.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsCH, "DAPAN", true));
@@ -559,11 +564,6 @@
             this.txtMACH.Size = new System.Drawing.Size(121, 21);
             this.txtMACH.TabIndex = 1;
             // 
-            // bdsTD
-            // 
-            this.bdsTD.DataMember = "SP_LAYTRINHDO";
-            this.bdsTD.DataSource = this.tRACNGHIEMDataSet;
-            // 
             // trinhdoTableAdapter
             // 
             this.trinhdoTableAdapter.ClearBeforeFill = true;
@@ -575,18 +575,18 @@
             this.ClientSize = new System.Drawing.Size(897, 602);
             this.Controls.Add(this.gbCH);
             this.Controls.Add(this.cauhoiGridControl);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnMM);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "FormBoDe";
-            this.Text = "FormBoDe";
+            this.Text = "BỘ ĐỀ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormBoDe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnMM.ResumeLayout(false);
+            this.pnMM.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdsMK)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tRACNGHIEMDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tRACNGHIEM)).EndInit();
@@ -615,7 +615,7 @@
         private DevExpress.XtraBars.BarDockControl barDockControlBottom;
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnMM;
         private System.Windows.Forms.BindingSource bdsCH;
         private TRACNGHIEM tRACNGHIEM;
         private TRACNGHIEMTableAdapters.CAUHOITableAdapter cauhoiTableAdapter;

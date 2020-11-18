@@ -50,9 +50,9 @@
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rbBD = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rbDKT = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.rbThi = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rbDX = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.pageBaoCao = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -132,8 +132,8 @@
             // 
             this.btnBD.Caption = "BỘ ĐỀ";
             this.btnBD.Id = 5;
-            this.btnBD.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.Image")));
-            this.btnBD.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.LargeImage")));
+            this.btnBD.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnBD.ImageOptions.Image")));
+            this.btnBD.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnBD.ImageOptions.LargeImage")));
             this.btnBD.Name = "btnBD";
             this.btnBD.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBD_ItemClick);
             // 
@@ -141,16 +141,17 @@
             // 
             this.btnDKT.Caption = "ĐĂNG KÝ THI";
             this.btnDKT.Id = 6;
-            this.btnDKT.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.Image")));
-            this.btnDKT.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.LargeImage")));
+            this.btnDKT.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDKT.ImageOptions.Image")));
+            this.btnDKT.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDKT.ImageOptions.LargeImage")));
             this.btnDKT.Name = "btnDKT";
+            this.btnDKT.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDKT_ItemClick);
             // 
             // btnThi
             // 
-            this.btnThi.Caption = "THI";
+            this.btnThi.Caption = "THI THỬ";
             this.btnThi.Id = 7;
-            this.btnThi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.Image")));
-            this.btnThi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.LargeImage")));
+            this.btnThi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThi.ImageOptions.Image")));
+            this.btnThi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnThi.ImageOptions.LargeImage")));
             this.btnThi.Name = "btnThi";
             // 
             // barButtonItem8
@@ -234,27 +235,29 @@
             // ribbonPage2
             // 
             this.ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup2,
-            this.ribbonPageGroup7,
-            this.ribbonPageGroup8,
+            this.rbBD,
+            this.rbDKT,
+            this.rbThi,
             this.rbDX});
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "BỘ ĐỀ";
             // 
-            // ribbonPageGroup2
+            // rbBD
             // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.btnBD);
-            this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            this.rbBD.ItemLinks.Add(this.btnBD);
+            this.rbBD.Name = "rbBD";
             // 
-            // ribbonPageGroup7
+            // rbDKT
             // 
-            this.ribbonPageGroup7.ItemLinks.Add(this.btnDKT);
-            this.ribbonPageGroup7.Name = "ribbonPageGroup7";
+            this.rbDKT.ItemLinks.Add(this.btnDKT);
+            this.rbDKT.Name = "rbDKT";
+            this.rbDKT.Visible = false;
             // 
-            // ribbonPageGroup8
+            // rbThi
             // 
-            this.ribbonPageGroup8.ItemLinks.Add(this.btnThi);
-            this.ribbonPageGroup8.Name = "ribbonPageGroup8";
+            this.rbThi.ItemLinks.Add(this.btnThi);
+            this.rbThi.Name = "rbThi";
+            this.rbThi.Visible = false;
             // 
             // rbDX
             // 
@@ -336,7 +339,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage pageHeThong;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup btnTaoTK;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbBD;
         private DevExpress.XtraBars.Ribbon.RibbonPage pageBaoCao;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.BarButtonItem barBtnTaoTK;
@@ -350,8 +353,8 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup btnGV;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbDKT;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup rbThi;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel MaSo;
         private System.Windows.Forms.ToolStripStatusLabel Ten;

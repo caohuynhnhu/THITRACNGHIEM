@@ -35,12 +35,16 @@ namespace THITRACNGHIEM
             {
                 btnTaoTK.Visible = false;
                 pageHeThong.Visible = pageBaoCao.Visible = false;
-                rbDX.Visible = true;
+                rbDX.Visible = rbThi.Visible = true;
             }
             if (Program.mGroup == "KHOA")
             {
                 pageBaoCao.Visible = false;
                 rbDX.Visible = true;
+            }
+            if(Program.mGroup == "PGV")
+            {
+                rbDKT.Visible = true;
             }
         }
 
@@ -168,6 +172,22 @@ namespace THITRACNGHIEM
             }
             else form.Activate();
             this.Close();
+        }
+
+        private void btnDKT_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form form = CheckExists(typeof(FormDangKyThi));
+            if (form != null)
+            {
+                form.Activate();
+            }
+            else
+            {
+                FormDangKyThi formbd = new FormDangKyThi();
+                formbd.MdiParent = Program.formmain;
+                formbd.Activate();
+                formbd.Show();
+            }
         }
     }
 }
