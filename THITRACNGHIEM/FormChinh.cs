@@ -189,5 +189,16 @@ namespace THITRACNGHIEM
                 formbd.Show();
             }
         }
+
+        private void btnThi_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form form = this.CheckExists(typeof(FormThi));
+            if (form == null)
+            {
+                FormThi f = new FormThi();
+                f.Show();
+            }
+            else form.Activate();
+        }
     }
 }

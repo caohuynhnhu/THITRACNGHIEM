@@ -171,11 +171,12 @@
             this.cmbCoSo.DisplayMember = "description";
             this.cmbCoSo.DropDownHeight = 150;
             this.cmbCoSo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCoSo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCoSo.FormattingEnabled = true;
             this.cmbCoSo.IntegralHeight = false;
             this.cmbCoSo.Location = new System.Drawing.Point(185, 44);
             this.cmbCoSo.Name = "cmbCoSo";
-            this.cmbCoSo.Size = new System.Drawing.Size(228, 21);
+            this.cmbCoSo.Size = new System.Drawing.Size(228, 27);
             this.cmbCoSo.TabIndex = 16;
             this.cmbCoSo.ValueMember = "subscriber_server";
             this.cmbCoSo.SelectedIndexChanged += new System.EventHandler(this.v_DSPMComboBox_SelectedIndexChanged);

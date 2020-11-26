@@ -298,10 +298,11 @@
             // cmbMH
             // 
             this.cmbMH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMH.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMH.FormattingEnabled = true;
-            this.cmbMH.Location = new System.Drawing.Point(197, 14);
+            this.cmbMH.Location = new System.Drawing.Point(203, 13);
             this.cmbMH.Name = "cmbMH";
-            this.cmbMH.Size = new System.Drawing.Size(244, 21);
+            this.cmbMH.Size = new System.Drawing.Size(244, 27);
             this.cmbMH.TabIndex = 0;
             this.cmbMH.SelectionChangeCommitted += new System.EventHandler(this.cmbMH_SelectionChangeCommitted);
             this.cmbMH.Click += new System.EventHandler(this.cmbMK_Click);
@@ -319,6 +320,7 @@
             // tRACNGHIEM
             // 
             this.tRACNGHIEM.DataSetName = "TRACNGHIEM";
+            this.tRACNGHIEM.EnforceConstraints = false;
             this.tRACNGHIEM.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bdsCH

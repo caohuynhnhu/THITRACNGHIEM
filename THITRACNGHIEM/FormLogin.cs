@@ -128,7 +128,6 @@ namespace THITRACNGHIEM
                     Program.formmain = new FormChinh();
                     Program.formmain.Activate();
                     Program.formmain.Show();
-                    this.Close();
                 }
                 this.Hide();
             }

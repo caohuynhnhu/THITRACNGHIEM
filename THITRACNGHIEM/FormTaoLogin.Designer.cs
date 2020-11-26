@@ -31,6 +31,8 @@
             this.btnTao = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbMAGV = new System.Windows.Forms.ComboBox();
+            this.cmbNQ = new System.Windows.Forms.ComboBox();
             this.txtDN = new System.Windows.Forms.TextBox();
             this.txtXNMK = new System.Windows.Forms.TextBox();
             this.txtMK = new System.Windows.Forms.TextBox();
@@ -39,15 +41,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lbTen = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbNQ = new System.Windows.Forms.ComboBox();
-            this.cmbMAGV = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnTao
             // 
             this.btnTao.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTao.Location = new System.Drawing.Point(345, 258);
+            this.btnTao.Location = new System.Drawing.Point(356, 258);
             this.btnTao.Name = "btnTao";
             this.btnTao.Size = new System.Drawing.Size(100, 35);
             this.btnTao.TabIndex = 0;
@@ -58,7 +58,7 @@
             // btnHuy
             // 
             this.btnHuy.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(474, 258);
+            this.btnHuy.Location = new System.Drawing.Point(485, 258);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(95, 35);
             this.btnHuy.TabIndex = 1;
@@ -87,27 +87,50 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
+            // cmbMAGV
+            // 
+            this.cmbMAGV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMAGV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMAGV.FormattingEnabled = true;
+            this.cmbMAGV.Location = new System.Drawing.Point(356, 60);
+            this.cmbMAGV.Name = "cmbMAGV";
+            this.cmbMAGV.Size = new System.Drawing.Size(224, 27);
+            this.cmbMAGV.TabIndex = 11;
+            // 
+            // cmbNQ
+            // 
+            this.cmbNQ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbNQ.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbNQ.FormattingEnabled = true;
+            this.cmbNQ.Location = new System.Drawing.Point(356, 14);
+            this.cmbNQ.Name = "cmbNQ";
+            this.cmbNQ.Size = new System.Drawing.Size(224, 27);
+            this.cmbNQ.TabIndex = 10;
+            // 
             // txtDN
             // 
-            this.txtDN.Location = new System.Drawing.Point(345, 102);
+            this.txtDN.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDN.Location = new System.Drawing.Point(356, 101);
             this.txtDN.Name = "txtDN";
-            this.txtDN.Size = new System.Drawing.Size(224, 21);
+            this.txtDN.Size = new System.Drawing.Size(224, 26);
             this.txtDN.TabIndex = 9;
             // 
             // txtXNMK
             // 
-            this.txtXNMK.Location = new System.Drawing.Point(345, 203);
+            this.txtXNMK.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtXNMK.Location = new System.Drawing.Point(356, 202);
             this.txtXNMK.Name = "txtXNMK";
             this.txtXNMK.PasswordChar = '*';
-            this.txtXNMK.Size = new System.Drawing.Size(224, 21);
+            this.txtXNMK.Size = new System.Drawing.Size(224, 26);
             this.txtXNMK.TabIndex = 8;
             // 
             // txtMK
             // 
-            this.txtMK.Location = new System.Drawing.Point(345, 155);
+            this.txtMK.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMK.Location = new System.Drawing.Point(356, 154);
             this.txtMK.Name = "txtMK";
             this.txtMK.PasswordChar = '*';
-            this.txtMK.Size = new System.Drawing.Size(224, 21);
+            this.txtMK.Size = new System.Drawing.Size(224, 26);
             this.txtMK.TabIndex = 7;
             // 
             // label5
@@ -159,24 +182,6 @@
             this.label1.Size = new System.Drawing.Size(87, 19);
             this.label1.TabIndex = 2;
             this.label1.Text = "Nhóm quyền";
-            // 
-            // cmbNQ
-            // 
-            this.cmbNQ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbNQ.FormattingEnabled = true;
-            this.cmbNQ.Location = new System.Drawing.Point(345, 15);
-            this.cmbNQ.Name = "cmbNQ";
-            this.cmbNQ.Size = new System.Drawing.Size(224, 21);
-            this.cmbNQ.TabIndex = 10;
-            // 
-            // cmbMAGV
-            // 
-            this.cmbMAGV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbMAGV.FormattingEnabled = true;
-            this.cmbMAGV.Location = new System.Drawing.Point(345, 61);
-            this.cmbMAGV.Name = "cmbMAGV";
-            this.cmbMAGV.Size = new System.Drawing.Size(224, 21);
-            this.cmbMAGV.TabIndex = 11;
             // 
             // FormTaoLogin
             // 

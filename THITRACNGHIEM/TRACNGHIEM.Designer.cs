@@ -625,7 +625,7 @@ namespace THITRACNGHIEM {
             this.DataSetName = "TRACNGHIEM";
             this.Prefix = "";
             this.Namespace = "http://tempuri.org/TRACNGHIEM.xsd";
-            this.EnforceConstraints = true;
+            this.EnforceConstraints = false;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableCAUHOI = new CAUHOIDataTable();
             base.Tables.Add(this.tableCAUHOI);

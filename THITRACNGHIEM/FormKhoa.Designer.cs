@@ -53,8 +53,10 @@
             this.khoaTableAdapter = new THITRACNGHIEM.TRACNGHIEMTableAdapters.KHOATableAdapter();
             this.lopTableAdapter = new THITRACNGHIEM.TRACNGHIEMTableAdapters.LOPTableAdapter();
             this.gbCS = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.cmbCS = new System.Windows.Forms.ComboBox();
+            this.v_DSPMBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tRACNGHIEMDataSet = new THITRACNGHIEM.TRACNGHIEMDataSet();
+            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lopGridControl = new DevExpress.XtraGrid.GridControl();
             this.bdsLOP = new System.Windows.Forms.BindingSource(this.components);
@@ -84,8 +86,6 @@
             this.tableAdapterManager1 = new THITRACNGHIEM.TRACNGHIEMDataSetTableAdapters.TableAdapterManager();
             this.bdsGV = new System.Windows.Forms.BindingSource(this.components);
             this.gIANGVIENTableAdapter = new THITRACNGHIEM.TRACNGHIEMTableAdapters.GIANGVIENTableAdapter();
-            this.v_DSPMBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cmbCS = new System.Windows.Forms.ComboBox();
             mAKHLabel = new System.Windows.Forms.Label();
             tENKHLabel = new System.Windows.Forms.Label();
             mACSLabel = new System.Windows.Forms.Label();
@@ -95,6 +95,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tRACNGHIEM)).BeginInit();
             this.gbCS.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.v_DSPMBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tRACNGHIEMDataSet)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lopGridControl)).BeginInit();
@@ -106,7 +107,6 @@
             this.gbKHOA.SuspendLayout();
             this.gbLOP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdsGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.v_DSPMBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // mAKHLabel
@@ -279,6 +279,7 @@
             // tRACNGHIEM
             // 
             this.tRACNGHIEM.DataSetName = "TRACNGHIEM";
+            this.tRACNGHIEM.EnforceConstraints = false;
             this.tRACNGHIEM.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tableAdapterManager
@@ -320,6 +321,30 @@
             this.gbCS.TabIndex = 6;
             this.gbCS.TabStop = false;
             // 
+            // cmbCS
+            // 
+            this.cmbCS.DataSource = this.v_DSPMBindingSource;
+            this.cmbCS.DisplayMember = "description";
+            this.cmbCS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCS.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCS.FormattingEnabled = true;
+            this.cmbCS.Location = new System.Drawing.Point(155, 16);
+            this.cmbCS.Name = "cmbCS";
+            this.cmbCS.Size = new System.Drawing.Size(300, 27);
+            this.cmbCS.TabIndex = 1;
+            this.cmbCS.ValueMember = "subscriber_server";
+            this.cmbCS.SelectedIndexChanged += new System.EventHandler(this.cmbCS_SelectedIndexChanged_1);
+            // 
+            // v_DSPMBindingSource
+            // 
+            this.v_DSPMBindingSource.DataMember = "V_DSPM";
+            this.v_DSPMBindingSource.DataSource = this.tRACNGHIEMDataSet;
+            // 
+            // tRACNGHIEMDataSet
+            // 
+            this.tRACNGHIEMDataSet.DataSetName = "TRACNGHIEMDataSet";
+            this.tRACNGHIEMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -329,11 +354,6 @@
             this.label1.Size = new System.Drawing.Size(49, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "Cơ Sở";
-            // 
-            // tRACNGHIEMDataSet
-            // 
-            this.tRACNGHIEMDataSet.DataSetName = "TRACNGHIEMDataSet";
-            this.tRACNGHIEMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tableLayoutPanel1
             // 
@@ -606,24 +626,6 @@
             // 
             this.gIANGVIENTableAdapter.ClearBeforeFill = true;
             // 
-            // v_DSPMBindingSource
-            // 
-            this.v_DSPMBindingSource.DataMember = "V_DSPM";
-            this.v_DSPMBindingSource.DataSource = this.tRACNGHIEMDataSet;
-            // 
-            // cmbCS
-            // 
-            this.cmbCS.DataSource = this.v_DSPMBindingSource;
-            this.cmbCS.DisplayMember = "description";
-            this.cmbCS.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCS.FormattingEnabled = true;
-            this.cmbCS.Location = new System.Drawing.Point(155, 20);
-            this.cmbCS.Name = "cmbCS";
-            this.cmbCS.Size = new System.Drawing.Size(300, 21);
-            this.cmbCS.TabIndex = 1;
-            this.cmbCS.ValueMember = "subscriber_server";
-            this.cmbCS.SelectedIndexChanged += new System.EventHandler(this.cmbCS_SelectedIndexChanged_1);
-            // 
             // FormKhoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -643,6 +645,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tRACNGHIEM)).EndInit();
             this.gbCS.ResumeLayout(false);
             this.gbCS.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.v_DSPMBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tRACNGHIEMDataSet)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.lopGridControl)).EndInit();
@@ -656,7 +659,6 @@
             this.gbLOP.ResumeLayout(false);
             this.gbLOP.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdsGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.v_DSPMBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
