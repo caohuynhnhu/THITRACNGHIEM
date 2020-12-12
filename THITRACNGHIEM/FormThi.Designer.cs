@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormThi));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.gbTT = new System.Windows.Forms.GroupBox();
             this.lbHT = new System.Windows.Forms.Label();
@@ -53,9 +54,28 @@
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnBD = new System.Windows.Forms.Button();
             this.lbTimer = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelTG = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbCH = new System.Windows.Forms.GroupBox();
+            this.lbD = new System.Windows.Forms.Label();
+            this.lbC = new System.Windows.Forms.Label();
+            this.lbB = new System.Windows.Forms.Label();
+            this.lbA = new System.Windows.Forms.Label();
+            this.radioD = new System.Windows.Forms.RadioButton();
+            this.radioC = new System.Windows.Forms.RadioButton();
+            this.radioB = new System.Windows.Forms.RadioButton();
+            this.radioA = new System.Windows.Forms.RadioButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tblNoiDung = new System.Windows.Forms.Label();
+            this.lbSoCau = new System.Windows.Forms.Label();
+            this.lbCau = new System.Windows.Forms.Label();
+            this.btnLast = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSau = new DevExpress.XtraEditors.SimpleButton();
+            this.btnTruoc = new DevExpress.XtraEditors.SimpleButton();
+            this.btnFirst = new DevExpress.XtraEditors.SimpleButton();
             this.tRACNGHIEMDataSet = new THITRACNGHIEM.TRACNGHIEMDataSet();
             this.sPMONTHICUASVBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sP_MONTHICUASVTableAdapter = new THITRACNGHIEM.TRACNGHIEMDataSetTableAdapters.SP_MONTHICUASVTableAdapter();
@@ -65,6 +85,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayThi.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayThi.Properties)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.gbCH.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tRACNGHIEMDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sPMONTHICUASVBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -292,7 +313,7 @@
             this.groupBox1.Controls.Add(this.btnThoat);
             this.groupBox1.Controls.Add(this.btnBD);
             this.groupBox1.Controls.Add(this.lbTimer);
-            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.labelTG);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 147);
             this.groupBox1.Name = "groupBox1";
@@ -310,6 +331,7 @@
             this.btnNB.Text = "Nộp bài";
             this.btnNB.UseVisualStyleBackColor = true;
             this.btnNB.Visible = false;
+            this.btnNB.Click += new System.EventHandler(this.btnNB_Click);
             // 
             // btnThoat
             // 
@@ -339,28 +361,244 @@
             this.lbTimer.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTimer.Location = new System.Drawing.Point(102, 24);
             this.lbTimer.Name = "lbTimer";
-            this.lbTimer.Size = new System.Drawing.Size(43, 19);
+            this.lbTimer.Size = new System.Drawing.Size(0, 19);
             this.lbTimer.TabIndex = 1;
-            this.lbTimer.Text = "Time";
+            this.lbTimer.Visible = false;
+            // 
+            // labelTG
+            // 
+            this.labelTG.AutoSize = true;
+            this.labelTG.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTG.Location = new System.Drawing.Point(14, 24);
+            this.labelTG.Name = "labelTG";
+            this.labelTG.Size = new System.Drawing.Size(67, 19);
+            this.labelTG.TabIndex = 0;
+            this.labelTG.Text = "Thời gian:";
+            this.labelTG.Visible = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // gbCH
+            // 
+            this.gbCH.Controls.Add(this.lbD);
+            this.gbCH.Controls.Add(this.lbC);
+            this.gbCH.Controls.Add(this.lbB);
+            this.gbCH.Controls.Add(this.lbA);
+            this.gbCH.Controls.Add(this.radioD);
+            this.gbCH.Controls.Add(this.radioC);
+            this.gbCH.Controls.Add(this.radioB);
+            this.gbCH.Controls.Add(this.radioA);
+            this.gbCH.Controls.Add(this.label6);
+            this.gbCH.Controls.Add(this.label5);
+            this.gbCH.Controls.Add(this.label4);
+            this.gbCH.Controls.Add(this.label3);
+            this.gbCH.Controls.Add(this.tblNoiDung);
+            this.gbCH.Controls.Add(this.lbSoCau);
+            this.gbCH.Controls.Add(this.lbCau);
+            this.gbCH.Controls.Add(this.btnLast);
+            this.gbCH.Controls.Add(this.btnSau);
+            this.gbCH.Controls.Add(this.btnTruoc);
+            this.gbCH.Controls.Add(this.btnFirst);
+            this.gbCH.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gbCH.Location = new System.Drawing.Point(0, 218);
+            this.gbCH.Name = "gbCH";
+            this.gbCH.Size = new System.Drawing.Size(868, 473);
+            this.gbCH.TabIndex = 2;
+            this.gbCH.TabStop = false;
+            this.gbCH.Visible = false;
+            // 
+            // lbD
+            // 
+            this.lbD.AutoSize = true;
+            this.lbD.Location = new System.Drawing.Point(139, 249);
+            this.lbD.Name = "lbD";
+            this.lbD.Size = new System.Drawing.Size(41, 13);
+            this.lbD.TabIndex = 17;
+            this.lbD.Text = "label10";
+            // 
+            // lbC
+            // 
+            this.lbC.AutoSize = true;
+            this.lbC.Location = new System.Drawing.Point(139, 200);
+            this.lbC.Name = "lbC";
+            this.lbC.Size = new System.Drawing.Size(35, 13);
+            this.lbC.TabIndex = 16;
+            this.lbC.Text = "label9";
+            // 
+            // lbB
+            // 
+            this.lbB.AutoSize = true;
+            this.lbB.Location = new System.Drawing.Point(139, 154);
+            this.lbB.Name = "lbB";
+            this.lbB.Size = new System.Drawing.Size(35, 13);
+            this.lbB.TabIndex = 15;
+            this.lbB.Text = "label8";
+            // 
+            // lbA
+            // 
+            this.lbA.AutoSize = true;
+            this.lbA.Location = new System.Drawing.Point(139, 104);
+            this.lbA.Name = "lbA";
+            this.lbA.Size = new System.Drawing.Size(35, 13);
+            this.lbA.TabIndex = 14;
+            this.lbA.Text = "label7";
+            // 
+            // radioD
+            // 
+            this.radioD.AutoSize = true;
+            this.radioD.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioD.Location = new System.Drawing.Point(63, 248);
+            this.radioD.Name = "radioD";
+            this.radioD.Size = new System.Drawing.Size(14, 13);
+            this.radioD.TabIndex = 13;
+            this.radioD.TabStop = true;
+            this.radioD.UseVisualStyleBackColor = true;
+            this.radioD.CheckedChanged += new System.EventHandler(this.radioD_CheckedChanged);
+            // 
+            // radioC
+            // 
+            this.radioC.AutoSize = true;
+            this.radioC.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioC.Location = new System.Drawing.Point(63, 199);
+            this.radioC.Name = "radioC";
+            this.radioC.Size = new System.Drawing.Size(14, 13);
+            this.radioC.TabIndex = 12;
+            this.radioC.TabStop = true;
+            this.radioC.UseVisualStyleBackColor = true;
+            this.radioC.CheckedChanged += new System.EventHandler(this.radioC_CheckedChanged);
+            // 
+            // radioB
+            // 
+            this.radioB.AutoSize = true;
+            this.radioB.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioB.Location = new System.Drawing.Point(63, 153);
+            this.radioB.Name = "radioB";
+            this.radioB.Size = new System.Drawing.Size(14, 13);
+            this.radioB.TabIndex = 11;
+            this.radioB.TabStop = true;
+            this.radioB.UseVisualStyleBackColor = true;
+            this.radioB.CheckedChanged += new System.EventHandler(this.radioB_CheckedChanged);
+            // 
+            // radioA
+            // 
+            this.radioA.AutoSize = true;
+            this.radioA.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioA.Location = new System.Drawing.Point(63, 103);
+            this.radioA.Name = "radioA";
+            this.radioA.Size = new System.Drawing.Size(14, 13);
+            this.radioA.TabIndex = 10;
+            this.radioA.TabStop = true;
+            this.radioA.UseVisualStyleBackColor = true;
+            this.radioA.CheckedChanged += new System.EventHandler(this.radioA_CheckedChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(101, 245);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(20, 19);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "D";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(101, 196);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(20, 19);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "C";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(14, 24);
+            this.label4.Location = new System.Drawing.Point(102, 150);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 19);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Thời gian:";
+            this.label4.Size = new System.Drawing.Size(19, 19);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "B";
             // 
-            // groupBox2
+            // label3
             // 
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox2.Location = new System.Drawing.Point(0, 218);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(868, 290);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(102, 100);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(20, 19);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "A";
+            // 
+            // tblNoiDung
+            // 
+            this.tblNoiDung.AutoSize = true;
+            this.tblNoiDung.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tblNoiDung.Location = new System.Drawing.Point(101, 21);
+            this.tblNoiDung.Name = "tblNoiDung";
+            this.tblNoiDung.Size = new System.Drawing.Size(45, 19);
+            this.tblNoiDung.TabIndex = 5;
+            this.tblNoiDung.Text = "label3";
+            // 
+            // lbSoCau
+            // 
+            this.lbSoCau.AutoSize = true;
+            this.lbSoCau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSoCau.Location = new System.Drawing.Point(49, 21);
+            this.lbSoCau.Name = "lbSoCau";
+            this.lbSoCau.Size = new System.Drawing.Size(45, 19);
+            this.lbSoCau.TabIndex = 5;
+            this.lbSoCau.Text = "label3";
+            // 
+            // lbCau
+            // 
+            this.lbCau.AutoSize = true;
+            this.lbCau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCau.Location = new System.Drawing.Point(6, 21);
+            this.lbCau.Name = "lbCau";
+            this.lbCau.Size = new System.Drawing.Size(37, 19);
+            this.lbCau.TabIndex = 4;
+            this.lbCau.Text = "Câu:";
+            // 
+            // btnLast
+            // 
+            this.btnLast.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLast.ImageOptions.Image")));
+            this.btnLast.Location = new System.Drawing.Point(286, 340);
+            this.btnLast.Name = "btnLast";
+            this.btnLast.Size = new System.Drawing.Size(54, 39);
+            this.btnLast.TabIndex = 3;
+            this.btnLast.Click += new System.EventHandler(this.btnLast_Click);
+            // 
+            // btnSau
+            // 
+            this.btnSau.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSau.ImageOptions.Image")));
+            this.btnSau.Location = new System.Drawing.Point(222, 340);
+            this.btnSau.Name = "btnSau";
+            this.btnSau.Size = new System.Drawing.Size(44, 39);
+            this.btnSau.TabIndex = 2;
+            this.btnSau.Click += new System.EventHandler(this.btnSau_Click);
+            // 
+            // btnTruoc
+            // 
+            this.btnTruoc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTruoc.ImageOptions.Image")));
+            this.btnTruoc.Location = new System.Drawing.Point(142, 340);
+            this.btnTruoc.Name = "btnTruoc";
+            this.btnTruoc.Size = new System.Drawing.Size(53, 39);
+            this.btnTruoc.TabIndex = 1;
+            this.btnTruoc.Click += new System.EventHandler(this.btnTruoc_Click);
+            // 
+            // btnFirst
+            // 
+            this.btnFirst.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFirst.ImageOptions.Image")));
+            this.btnFirst.Location = new System.Drawing.Point(63, 340);
+            this.btnFirst.Name = "btnFirst";
+            this.btnFirst.Size = new System.Drawing.Size(55, 39);
+            this.btnFirst.TabIndex = 0;
+            this.btnFirst.Click += new System.EventHandler(this.btnFirst_Click);
             // 
             // tRACNGHIEMDataSet
             // 
@@ -381,7 +619,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(868, 756);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.gbCH);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FormThi";
@@ -397,6 +635,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateNgayThi.Properties)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.gbCH.ResumeLayout(false);
+            this.gbCH.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tRACNGHIEMDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sPMONTHICUASVBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -419,9 +659,9 @@
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnBD;
         private System.Windows.Forms.Label lbTimer;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelTG;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbCH;
         private System.Windows.Forms.Label lbTGText;
         private System.Windows.Forms.Label lbSCText;
         private System.Windows.Forms.Label lbTDText;
@@ -435,5 +675,24 @@
         private System.Windows.Forms.BindingSource sPMONTHICUASVBindingSource;
         private TRACNGHIEMDataSet tRACNGHIEMDataSet;
         private TRACNGHIEMDataSetTableAdapters.SP_MONTHICUASVTableAdapter sP_MONTHICUASVTableAdapter;
+        private System.Windows.Forms.RadioButton radioA;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbSoCau;
+        private System.Windows.Forms.Label lbCau;
+        private DevExpress.XtraEditors.SimpleButton btnLast;
+        private DevExpress.XtraEditors.SimpleButton btnSau;
+        private DevExpress.XtraEditors.SimpleButton btnTruoc;
+        private DevExpress.XtraEditors.SimpleButton btnFirst;
+        private System.Windows.Forms.RadioButton radioD;
+        private System.Windows.Forms.RadioButton radioC;
+        private System.Windows.Forms.RadioButton radioB;
+        private System.Windows.Forms.Label lbD;
+        private System.Windows.Forms.Label lbC;
+        private System.Windows.Forms.Label lbB;
+        private System.Windows.Forms.Label lbA;
+        private System.Windows.Forms.Label tblNoiDung;
     }
 }

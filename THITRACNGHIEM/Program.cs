@@ -22,7 +22,7 @@ namespace THITRACNGHIEM
         public static String connstr;
         public static String servername = "";
         public static SqlDataReader myReader;
-
+        public static String CoSo = "";
         public static String login = "";
         public static String username = "";
         public static String password = "";

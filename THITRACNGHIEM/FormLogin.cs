@@ -131,6 +131,14 @@ namespace THITRACNGHIEM
                 }
                 this.Hide();
             }
+            if (Program.mCoso == 0)
+            {
+                Program.CoSo = "Cơ sở 1";
+            }
+            else
+            {
+                Program.CoSo = "Cơ sở 2";
+            }
         }
 
         private void FormLogin_Enter(object sender, EventArgs e)

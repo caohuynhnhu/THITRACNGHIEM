@@ -32,15 +32,15 @@
             System.Windows.Forms.Label mAMHLabel;
             System.Windows.Forms.Label mANVLabel;
             System.Windows.Forms.Label tRINHDOLabel;
-            System.Windows.Forms.Label iDDKLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDangKyThi));
             System.Windows.Forms.Label mALOPLabel;
             System.Windows.Forms.Label tHOIGIANLabel;
             System.Windows.Forms.Label sOCAULabel;
             System.Windows.Forms.Label nGAYTHILabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDangKyThi));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnThem = new DevExpress.XtraBars.BarButtonItem();
+            this.btnLoad = new DevExpress.XtraBars.BarButtonItem();
             this.btnThoat = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -62,27 +62,24 @@
             this.colSOCAU = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colIDDK = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gbDK = new System.Windows.Forms.GroupBox();
+            this.datetimeNT = new System.Windows.Forms.DateTimePicker();
+            this.spinSC = new DevExpress.XtraEditors.SpinEdit();
+            this.spinTG = new DevExpress.XtraEditors.SpinEdit();
+            this.cmbML = new System.Windows.Forms.ComboBox();
+            this.bdsLop = new System.Windows.Forms.BindingSource(this.components);
             this.cmbMH = new System.Windows.Forms.ComboBox();
             this.bdsMH = new System.Windows.Forms.BindingSource(this.components);
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnOk = new System.Windows.Forms.Button();
-            this.txtIDDK = new System.Windows.Forms.TextBox();
             this.cmbTD = new System.Windows.Forms.ComboBox();
-            this.txtMANV = new System.Windows.Forms.TextBox();
-            this.bdsLop = new System.Windows.Forms.BindingSource(this.components);
-            this.lopTableAdapter = new THITRACNGHIEM.TRACNGHIEMTableAdapters.LOPTableAdapter();
-            this.cmbML = new System.Windows.Forms.ComboBox();
-            this.tRACNGHIEMDataSet = new THITRACNGHIEM.TRACNGHIEMDataSet();
             this.sPLAYTRINHDOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tRACNGHIEMDataSet = new THITRACNGHIEM.TRACNGHIEMDataSet();
+            this.txtMANV = new System.Windows.Forms.TextBox();
+            this.lopTableAdapter = new THITRACNGHIEM.TRACNGHIEMTableAdapters.LOPTableAdapter();
             this.sP_LAYTRINHDOTableAdapter = new THITRACNGHIEM.TRACNGHIEMDataSetTableAdapters.SP_LAYTRINHDOTableAdapter();
-            this.spinTG = new DevExpress.XtraEditors.SpinEdit();
-            this.spinSC = new DevExpress.XtraEditors.SpinEdit();
-            this.btnLoad = new DevExpress.XtraBars.BarButtonItem();
-            this.datetimeNT = new System.Windows.Forms.DateTimePicker();
             mAMHLabel = new System.Windows.Forms.Label();
             mANVLabel = new System.Windows.Forms.Label();
             tRINHDOLabel = new System.Windows.Forms.Label();
-            iDDKLabel = new System.Windows.Forms.Label();
             mALOPLabel = new System.Windows.Forms.Label();
             tHOIGIANLabel = new System.Windows.Forms.Label();
             sOCAULabel = new System.Windows.Forms.Label();
@@ -93,12 +90,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dangkyGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.gbDK.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsMH)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsLop)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tRACNGHIEMDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sPLAYTRINHDOBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinTG.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinSC.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinTG.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsLop)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsMH)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sPLAYTRINHDOBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tRACNGHIEMDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // mAMHLabel
@@ -128,14 +125,41 @@
             tRINHDOLabel.TabIndex = 8;
             tRINHDOLabel.Text = "TRINHDO:";
             // 
-            // iDDKLabel
+            // mALOPLabel
             // 
-            iDDKLabel.AutoSize = true;
-            iDDKLabel.Location = new System.Drawing.Point(327, 156);
-            iDDKLabel.Name = "iDDKLabel";
-            iDDKLabel.Size = new System.Drawing.Size(35, 13);
-            iDDKLabel.TabIndex = 14;
-            iDDKLabel.Text = "IDDK:";
+            mALOPLabel.AutoSize = true;
+            mALOPLabel.Location = new System.Drawing.Point(25, 71);
+            mALOPLabel.Name = "mALOPLabel";
+            mALOPLabel.Size = new System.Drawing.Size(45, 13);
+            mALOPLabel.TabIndex = 18;
+            mALOPLabel.Text = "MALOP:";
+            // 
+            // tHOIGIANLabel
+            // 
+            tHOIGIANLabel.AutoSize = true;
+            tHOIGIANLabel.Location = new System.Drawing.Point(301, 71);
+            tHOIGIANLabel.Name = "tHOIGIANLabel";
+            tHOIGIANLabel.Size = new System.Drawing.Size(61, 13);
+            tHOIGIANLabel.TabIndex = 19;
+            tHOIGIANLabel.Text = "THOIGIAN:";
+            // 
+            // sOCAULabel
+            // 
+            sOCAULabel.AutoSize = true;
+            sOCAULabel.Location = new System.Drawing.Point(316, 114);
+            sOCAULabel.Name = "sOCAULabel";
+            sOCAULabel.Size = new System.Drawing.Size(46, 13);
+            sOCAULabel.TabIndex = 20;
+            sOCAULabel.Text = "SOCAU:";
+            // 
+            // nGAYTHILabel
+            // 
+            nGAYTHILabel.AutoSize = true;
+            nGAYTHILabel.Location = new System.Drawing.Point(15, 114);
+            nGAYTHILabel.Name = "nGAYTHILabel";
+            nGAYTHILabel.Size = new System.Drawing.Size(55, 13);
+            nGAYTHILabel.TabIndex = 21;
+            nGAYTHILabel.Text = "NGAYTHI:";
             // 
             // barManager1
             // 
@@ -171,6 +195,14 @@
             this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
             this.btnThem.Name = "btnThem";
             this.btnThem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThem_ItemClick);
+            // 
+            // btnLoad
+            // 
+            this.btnLoad.Caption = "Refresh";
+            this.btnLoad.Id = 2;
+            this.btnLoad.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLoad.ImageOptions.Image")));
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLoad_ItemClick);
             // 
             // btnThoat
             // 
@@ -215,6 +247,7 @@
             // tRACNGHIEM
             // 
             this.tRACNGHIEM.DataSetName = "TRACNGHIEM";
+            this.tRACNGHIEM.EnforceConstraints = false;
             this.tRACNGHIEM.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bdsDK
@@ -355,8 +388,6 @@
             this.gbDK.Controls.Add(this.cmbMH);
             this.gbDK.Controls.Add(this.btnHuy);
             this.gbDK.Controls.Add(this.btnOk);
-            this.gbDK.Controls.Add(iDDKLabel);
-            this.gbDK.Controls.Add(this.txtIDDK);
             this.gbDK.Controls.Add(tRINHDOLabel);
             this.gbDK.Controls.Add(this.cmbTD);
             this.gbDK.Controls.Add(mANVLabel);
@@ -369,6 +400,65 @@
             this.gbDK.Size = new System.Drawing.Size(1022, 399);
             this.gbDK.TabIndex = 7;
             this.gbDK.TabStop = false;
+            // 
+            // datetimeNT
+            // 
+            this.datetimeNT.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bdsDK, "NGAYTHI", true));
+            this.datetimeNT.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.datetimeNT.Location = new System.Drawing.Point(76, 110);
+            this.datetimeNT.Name = "datetimeNT";
+            this.datetimeNT.Size = new System.Drawing.Size(189, 21);
+            this.datetimeNT.TabIndex = 22;
+            // 
+            // spinSC
+            // 
+            this.spinSC.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsDK, "SOCAU", true));
+            this.spinSC.EditValue = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.spinSC.Location = new System.Drawing.Point(368, 111);
+            this.spinSC.MenuManager = this.barManager1;
+            this.spinSC.Name = "spinSC";
+            this.spinSC.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.spinSC.Size = new System.Drawing.Size(149, 20);
+            this.spinSC.TabIndex = 21;
+            // 
+            // spinTG
+            // 
+            this.spinTG.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsDK, "THOIGIAN", true));
+            this.spinTG.EditValue = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.spinTG.Location = new System.Drawing.Point(368, 68);
+            this.spinTG.MenuManager = this.barManager1;
+            this.spinTG.Name = "spinTG";
+            this.spinTG.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.spinTG.Size = new System.Drawing.Size(149, 20);
+            this.spinTG.TabIndex = 20;
+            // 
+            // cmbML
+            // 
+            this.cmbML.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsDK, "MALOP", true));
+            this.cmbML.DataSource = this.bdsLop;
+            this.cmbML.DisplayMember = "MALOP";
+            this.cmbML.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbML.FormattingEnabled = true;
+            this.cmbML.Location = new System.Drawing.Point(76, 68);
+            this.cmbML.Name = "cmbML";
+            this.cmbML.Size = new System.Drawing.Size(189, 21);
+            this.cmbML.TabIndex = 19;
+            this.cmbML.ValueMember = "MALOP";
+            // 
+            // bdsLop
+            // 
+            this.bdsLop.DataMember = "LOP";
+            this.bdsLop.DataSource = this.tRACNGHIEM;
             // 
             // cmbMH
             // 
@@ -410,14 +500,6 @@
             this.btnOk.Visible = false;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
-            // txtIDDK
-            // 
-            this.txtIDDK.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsDK, "IDDK", true));
-            this.txtIDDK.Location = new System.Drawing.Point(368, 153);
-            this.txtIDDK.Name = "txtIDDK";
-            this.txtIDDK.Size = new System.Drawing.Size(149, 21);
-            this.txtIDDK.TabIndex = 15;
-            // 
             // cmbTD
             // 
             this.cmbTD.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsDK, "TRINHDO", true));
@@ -431,6 +513,16 @@
             this.cmbTD.TabIndex = 9;
             this.cmbTD.ValueMember = "MATRINHDO";
             // 
+            // sPLAYTRINHDOBindingSource
+            // 
+            this.sPLAYTRINHDOBindingSource.DataMember = "SP_LAYTRINHDO";
+            this.sPLAYTRINHDOBindingSource.DataSource = this.tRACNGHIEMDataSet;
+            // 
+            // tRACNGHIEMDataSet
+            // 
+            this.tRACNGHIEMDataSet.DataSetName = "TRACNGHIEMDataSet";
+            this.tRACNGHIEMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // txtMANV
             // 
             this.txtMANV.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsDK, "MANV", true));
@@ -439,126 +531,13 @@
             this.txtMANV.Size = new System.Drawing.Size(189, 21);
             this.txtMANV.TabIndex = 7;
             // 
-            // bdsLop
-            // 
-            this.bdsLop.DataMember = "LOP";
-            this.bdsLop.DataSource = this.tRACNGHIEM;
-            // 
             // lopTableAdapter
             // 
             this.lopTableAdapter.ClearBeforeFill = true;
             // 
-            // mALOPLabel
-            // 
-            mALOPLabel.AutoSize = true;
-            mALOPLabel.Location = new System.Drawing.Point(25, 71);
-            mALOPLabel.Name = "mALOPLabel";
-            mALOPLabel.Size = new System.Drawing.Size(45, 13);
-            mALOPLabel.TabIndex = 18;
-            mALOPLabel.Text = "MALOP:";
-            // 
-            // cmbML
-            // 
-            this.cmbML.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bdsDK, "MALOP", true));
-            this.cmbML.DataSource = this.bdsLop;
-            this.cmbML.DisplayMember = "MALOP";
-            this.cmbML.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbML.FormattingEnabled = true;
-            this.cmbML.Location = new System.Drawing.Point(76, 68);
-            this.cmbML.Name = "cmbML";
-            this.cmbML.Size = new System.Drawing.Size(189, 21);
-            this.cmbML.TabIndex = 19;
-            this.cmbML.ValueMember = "MALOP";
-            // 
-            // tRACNGHIEMDataSet
-            // 
-            this.tRACNGHIEMDataSet.DataSetName = "TRACNGHIEMDataSet";
-            this.tRACNGHIEMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sPLAYTRINHDOBindingSource
-            // 
-            this.sPLAYTRINHDOBindingSource.DataMember = "SP_LAYTRINHDO";
-            this.sPLAYTRINHDOBindingSource.DataSource = this.tRACNGHIEMDataSet;
-            // 
             // sP_LAYTRINHDOTableAdapter
             // 
             this.sP_LAYTRINHDOTableAdapter.ClearBeforeFill = true;
-            // 
-            // tHOIGIANLabel
-            // 
-            tHOIGIANLabel.AutoSize = true;
-            tHOIGIANLabel.Location = new System.Drawing.Point(301, 71);
-            tHOIGIANLabel.Name = "tHOIGIANLabel";
-            tHOIGIANLabel.Size = new System.Drawing.Size(61, 13);
-            tHOIGIANLabel.TabIndex = 19;
-            tHOIGIANLabel.Text = "THOIGIAN:";
-            // 
-            // spinTG
-            // 
-            this.spinTG.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsDK, "THOIGIAN", true));
-            this.spinTG.EditValue = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.spinTG.Location = new System.Drawing.Point(368, 68);
-            this.spinTG.MenuManager = this.barManager1;
-            this.spinTG.Name = "spinTG";
-            this.spinTG.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.spinTG.Size = new System.Drawing.Size(149, 20);
-            this.spinTG.TabIndex = 20;
-            // 
-            // sOCAULabel
-            // 
-            sOCAULabel.AutoSize = true;
-            sOCAULabel.Location = new System.Drawing.Point(316, 114);
-            sOCAULabel.Name = "sOCAULabel";
-            sOCAULabel.Size = new System.Drawing.Size(46, 13);
-            sOCAULabel.TabIndex = 20;
-            sOCAULabel.Text = "SOCAU:";
-            // 
-            // spinSC
-            // 
-            this.spinSC.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsDK, "SOCAU", true));
-            this.spinSC.EditValue = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.spinSC.Location = new System.Drawing.Point(368, 111);
-            this.spinSC.MenuManager = this.barManager1;
-            this.spinSC.Name = "spinSC";
-            this.spinSC.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.spinSC.Size = new System.Drawing.Size(149, 20);
-            this.spinSC.TabIndex = 21;
-            // 
-            // btnLoad
-            // 
-            this.btnLoad.Caption = "Refresh";
-            this.btnLoad.Id = 2;
-            this.btnLoad.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLoad_ItemClick);
-            // 
-            // nGAYTHILabel
-            // 
-            nGAYTHILabel.AutoSize = true;
-            nGAYTHILabel.Location = new System.Drawing.Point(15, 114);
-            nGAYTHILabel.Name = "nGAYTHILabel";
-            nGAYTHILabel.Size = new System.Drawing.Size(55, 13);
-            nGAYTHILabel.TabIndex = 21;
-            nGAYTHILabel.Text = "NGAYTHI:";
-            // 
-            // datetimeNT
-            // 
-            this.datetimeNT.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bdsDK, "NGAYTHI", true));
-            this.datetimeNT.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.datetimeNT.Location = new System.Drawing.Point(76, 110);
-            this.datetimeNT.Name = "datetimeNT";
-            this.datetimeNT.Size = new System.Drawing.Size(189, 21);
-            this.datetimeNT.TabIndex = 22;
             // 
             // FormDangKyThi
             // 
@@ -582,12 +561,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.gbDK.ResumeLayout(false);
             this.gbDK.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsMH)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsLop)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tRACNGHIEMDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sPLAYTRINHDOBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spinTG.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spinSC.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinTG.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsLop)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsMH)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sPLAYTRINHDOBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tRACNGHIEMDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -620,7 +599,6 @@
         private System.Windows.Forms.GroupBox gbDK;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnOk;
-        private System.Windows.Forms.TextBox txtIDDK;
         private System.Windows.Forms.ComboBox cmbTD;
         private System.Windows.Forms.TextBox txtMANV;
         private TRACNGHIEMTableAdapters.MONHOCTableAdapter monhocTableAdapter;
