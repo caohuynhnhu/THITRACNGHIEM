@@ -33,6 +33,7 @@ namespace THITRACNGHIEM
         int soCauDung = 0;
         int soCauSai = 0;
         float diemThi = 0;
+        Boolean checkKetQuaThi = false;
         private void FormThi_Load(object sender, EventArgs e)
         {
             if (Program.mGroup == "SINHVIEN")
@@ -61,20 +62,7 @@ namespace THITRACNGHIEM
         {
             mamon = cmbMM.SelectedValue.ToString();
             ngayThi = dateNgayThi.DateTime.Date.ToShortDateString();
-            String sql1 = "EXEC SP_LAYNGAYTHI '" + malop.Trim() + "','" + mamon.Trim() + "'";
-            Program.myReader = Program.ExecSqlDataReader(sql1);
-            if (Program.myReader == null) return false;
-            Program.myReader.Read();
-            layNgayThi = Program.myReader.GetDateTime(0);
-            Console.WriteLine(layNgayThi.ToString("MM/dd/yyyy"));
-            Program.myReader.Close();
-            Program.conn.Close();
-
-            if (layNgayThi.CompareTo(DateTime.Today) != 0 ){
-                MessageBox.Show("Hôm nay không phải ngày thi! Về đi!");
-                cmbMM.Focus();
-            }
-
+            
             String sql = "EXEC THONGTINTHI '" + malop + "','" + mamon + "','" + ngayThi + "'";
             Program.myReader = Program.ExecSqlDataReader(sql);
             if (Program.myReader == null) return false;
@@ -87,7 +75,7 @@ namespace THITRACNGHIEM
             Program.myReader.Close();
             Program.conn.Close();
 
-            String sqllaycauhoi = "EXEC SP_LAYCAUHOI '" + malop.Trim() + "','" + mamon.Trim() + "','" + td.Trim() + "','" + socau + "'";
+            String sqllaycauhoi = "EXEC SP_LAYCAUHOI '" + malop.Trim() + "','" + mamon.Trim() + "','" + td.Trim() + "'," + (socau + 1);
             Program.myReader = Program.ExecSqlDataReader(sqllaycauhoi);
             if (Program.myReader == null) return false;
             Program.myReader.Read();
@@ -159,11 +147,29 @@ namespace THITRACNGHIEM
             }
             else
             {
-                lbSC.Visible = lbSCText.Visible = lbTD.Visible = labelTG.Visible = lbTimer.Visible =
-                lbTDText.Visible = lbTG.Visible = lbTGText.Visible = btnNB.Visible = gbCH.Visible = true;
-                btnThoat.Visible = cmbMM.Enabled = btnBD.Visible = false;
-                loadInfoThi();
-                timer1.Start();
+                mamon = cmbMM.SelectedValue.ToString();
+                String sql1 = "EXEC SP_LAYNGAYTHI '" + malop.Trim() + "','" + mamon.Trim() + "'";
+                Program.myReader = Program.ExecSqlDataReader(sql1);
+                /*if (Program.myReader == null)
+                { return false; }*/
+                Program.myReader.Read();
+                layNgayThi = Program.myReader.GetDateTime(0);
+                Console.WriteLine(layNgayThi.ToString("MM/dd/yyyy"));
+                Program.myReader.Close();
+                Program.conn.Close();
+
+                if (layNgayThi.CompareTo(DateTime.Today) != 0)
+                {
+                    MessageBox.Show("Hôm nay không phải ngày thi! Về đi!");
+                }
+                else
+                {
+                    lbSC.Visible = lbSCText.Visible = lbTD.Visible = labelTG.Visible = lbTimer.Visible =
+                    lbTDText.Visible = lbTG.Visible = lbTGText.Visible = btnNB.Visible = gbCH.Visible = true;
+                    btnThoat.Visible = cmbMM.Enabled = btnBD.Visible = false;
+                    loadInfoThi();
+                    timer1.Start();
+                }
             }
         }
 
@@ -192,6 +198,15 @@ namespace THITRACNGHIEM
                 }
                 btnNB.Visible = false;
                 btnThoat.Visible = true;
+                gbKQ.Visible = true;
+                lbDung.Text = soCauDung.ToString();
+                lbSai.Text = soCauSai.ToString();
+                lbDiem.Text = diemThi.ToString();
+                labelTG.Visible = lbTimer.Visible = false;
+                radioA.Enabled = false;
+                radioB.Enabled = false;
+                radioC.Enabled = false;
+                radioD.Enabled = false;
             }
         }
 
@@ -233,11 +248,13 @@ namespace THITRACNGHIEM
                 checkDapan();
             }
 
+            checKetQuaThi();
+
         }
 
         public void checkDapan()
         {
-            switch (listCauHoi[index].chonNgu)
+                switch (listCauHoi[index].chonNgu)
             {
                 case "A":
                     radioA.Checked = true;
@@ -267,7 +284,6 @@ namespace THITRACNGHIEM
                     break;
             }
         }
-
 
         private void btnTruoc_Click(object sender, EventArgs e)
         {
@@ -306,6 +322,8 @@ namespace THITRACNGHIEM
             {
                 checkDapan();
             }
+
+            checKetQuaThi();
         }
 
         private void btnLast_Click(object sender, EventArgs e)
@@ -322,7 +340,7 @@ namespace THITRACNGHIEM
             lbC.Text = listCauHoi[index].listLuaChon[2].noiDung;
             lbD.Text = listCauHoi[index].listLuaChon[3].noiDung;
 
-            if (listCauHoi[index].chonNgu == null || listCauHoi[index].chonNgu == "")
+            if (listCauHoi[index].chonNgu == null)
             {
                 radioA.Checked = false;
                 radioB.Checked = false;
@@ -333,6 +351,8 @@ namespace THITRACNGHIEM
             {
                 checkDapan();
             }
+
+            checKetQuaThi();
         }
 
         private void btnFirst_Click(object sender, EventArgs e)
@@ -360,6 +380,8 @@ namespace THITRACNGHIEM
             {
                 checkDapan();
             }
+
+            checKetQuaThi();
         }
 
         private void radioA_CheckedChanged(object sender, EventArgs e)
@@ -393,8 +415,19 @@ namespace THITRACNGHIEM
                 tinhDiem();
                 if(Program.mGroup == "SINHVIEN")
                 {
-                    insertDiemSV();
+                    /* insertDiemSV(); */
                 }
+                gbKQ.Visible = true;
+                lbDung.Text = soCauDung.ToString();
+                lbSai.Text = soCauSai.ToString();
+                lbDiem.Text = diemThi.ToString();
+                labelTG.Visible = lbTimer.Visible = false;
+                radioA.Enabled = radioB.Enabled = radioC.Enabled = radioD.Enabled = false;
+
+                checkKetQuaThi = true;
+
+                backToFirstPageAfterNopBai();
+
             }
         }
 
@@ -454,11 +487,105 @@ namespace THITRACNGHIEM
 
             }
             diemThi = (float)Math.Round((double)(10 * soCauDung) / listCauHoi.Count, 2);
-            MessageBox.Show("So cau dung : " + diemThi, "Notification", MessageBoxButtons.OK);
         }
 
-    }
+        public void checKetQuaThi()
+        {
+            if (checkKetQuaThi == true)
+            {
+                resetColor();
+                String dapAn = listCauHoi[index].dapAn;
+                String cauTl = listCauHoi[index].chonNgu;
+                checkColorTrue(dapAn);
+                if (cauTl == null || (cauTl != null && dapAn.Trim() != cauTl))
+                {
+                    switch (cauTl)
+                    {
+                        case "A":
+                            lbA.BackColor = Color.Red;
 
+                            break;
+                        case "B":
+                            lbB.BackColor = Color.Red;
+
+                            break;
+                        case "C":
+                            lbC.BackColor = Color.Red;
+
+                            break;
+                        case "D":
+                            lbD.BackColor = Color.Red;
+
+                            break;
+                        default:
+                            break;
+                    }
+                } 
+            }
+        }
+
+        public void checkColorTrue(String dapAn)
+        {
+            switch (dapAn)
+            {
+                case "A":
+                    lbA.BackColor = Color.Green;
+
+                    break;
+                case "B":
+                    lbB.BackColor = Color.Green;
+
+                    break;
+                case "C":
+                    lbC.BackColor = Color.Green;
+
+                    break;
+                case "D":
+                    lbD.BackColor = Color.Green;
+
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        public void resetColor()
+        {
+            lbA.BackColor = Color.White;
+            lbB.BackColor = Color.White;
+            lbC.BackColor = Color.White;
+            lbD.BackColor = Color.White;
+        }
+
+        public void backToFirstPageAfterNopBai()
+        {
+            index = 0;
+            btnSau.Enabled = true;
+            btnLast.Enabled = true;
+            btnTruoc.Enabled = false;
+            btnFirst.Enabled = false;
+            lbSoCau.Text = (index + 1).ToString();
+            tblNoiDung.Text = listCauHoi[index].noiDung;
+            lbA.Text = listCauHoi[index].listLuaChon[0].noiDung;
+            lbB.Text = listCauHoi[index].listLuaChon[1].noiDung;
+            lbC.Text = listCauHoi[index].listLuaChon[2].noiDung;
+            lbD.Text = listCauHoi[index].listLuaChon[3].noiDung;
+
+            if (listCauHoi[index].chonNgu == null || listCauHoi[index].chonNgu == "")
+            {
+                radioA.Checked = false;
+                radioB.Checked = false;
+                radioC.Checked = false;
+                radioD.Checked = false;
+            }
+            else
+            {
+                checkDapan();
+            }
+
+            checKetQuaThi();
+        }
+    }
 }
 public class CauHoi
 {

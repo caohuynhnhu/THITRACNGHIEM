@@ -61,5 +61,16 @@ namespace THITRACNGHIEM
             else form.Activate();
             
         }
+
+        private void btnXemKQ_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form form = this.CheckExists(typeof(FormXemKetQua));
+            if (form == null)
+            {
+                FormXemKetQua f = new FormXemKetQua();
+                f.Show();
+            }
+            else form.Activate();
+        }
     }
 }
